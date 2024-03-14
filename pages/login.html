@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+  </head>
+  <body>
+        <header>
+            <div class="container d-flex align-items-center gap-5">
+                <div class="brand">
+                    <a href=""></a>
+                </div>
+                <p class="d-flex m-0">
+                    La gestion simplifiée <br>
+des remboursements santé
+                </p>
+                <div class="header-right d-flex ms-auto gap-3 flex-wrap">
+                    <div class="text-color-mutted">
+                        pour les
+                    </div>
+                    <div>
+                        <a href=""  class="text-color-accent-secondary">Professionels de Sante</a>
+                    </div>
+                    <span></span>
+                    <div>
+                        <a href="" class="text-color-default">Patients</a>
+                    </div>
+                    <span></span>
+                    <div>
+                        <a href="" class="text-color-accent-light">Organismes complémentaires</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="page-content mx-auto mt-5">
+                    <h1 class="decor text-color-dark">Aspace Professionnels</h1>
+                    <div class="d-flex flex-column gap-3 mt-5">
+                        <form id="login-form" class="login-form" action="" method="">
+                            <h4 class="text-color-dark">Accédez à vos services en ligne (déjà inscrits)</h4>
+                            <section class="flex-column w-75">        
+                                <label class="text-color-dark" for="email">Email</label>
+                                <input id="email" name="email" type="email" placeholder="Enter your email here" autocomplete="username" required>
+                            </section>
+
+                            <section class="flex-column w-75">        
+                                <label class="text-color-dark" for="current-password">Password</label>
+                                <input id="current-password" name="current-password" type="password" autocomplete="current-password" placeholder="Enter your password here" aria-describedby="password-constraints" required>
+                                <button id="toggle-password" type="button" class="toggle-password" aria-label="Show password as plain text. Warning: this will display your password on the screen.">Show password</button>
+                              </section>
+                              <section class="gap-3 justify-content-between w-75 align-items-center">
+                                <a href="#" class="text-color-light">Identifiant ou mot de passe oublié ?                                </a>
+                                <input class="btn-primary signin-btn ms-auto me-auto mt-4" type="submit" id="signin" value="Valider">
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="d-flex flex-column align-items-end">
+            <div class="footer-top surface-bg-accent-dark w-75 ps-4 d-flex gap-3">
+                <a href="" class="text-color-default">Contactez-nous</a>
+                <a href="" class="text-color-default">Mentions Legales</a>
+            </div>
+            <div class="footer-bottom surface-bg-dark2 w-100">
+                
+            </div>
+        </footer>
+
+        <script>
+            var hidePass = document.getElementById("toggle-password");
+            hidePass.addEventListener("click", function() {
+              hidePass.classList.toggle("hide");
+            });
+        </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+</html>
