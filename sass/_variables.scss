@@ -1,0 +1,147 @@
+// Variables and utilityes
+
+// Brand prefix
+
+$pref: ba-;
+
+// Font family
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+
+
+// Root
+$color-primary: #BDBDD6;
+$color-primary-dark: #5f54a4;
+$color-primary-dark2: #424187;
+$color-primary-light: #bdbdd6;
+$color-secondary: #fe6700;
+$color-secondary-light: #f7941d;
+$color-third: #d4edd7;
+$color-white: #ffffff;
+$font-family-base: 'Cabin', sans-serif;
+// Alias
+$color-accent-dark: $color-secondary;
+$color-accent-light: $color-secondary-light;
+$color-accent-secondary: $color-third;
+$color-bg-dark: $color-primary-dark;
+$color-bg-dark2: $color-primary-dark2;
+$color-bg-default: $color-primary;
+$color-bg-light: $color-primary-light;
+$font-family-primary: $font-family-base;
+// Mapped
+$btn-bg-accent-dark: $color-accent-dark;
+$btn-bg-accent-light: $color-accent-light;
+$btn-bg-default: $color-bg-dark;
+$surface-bg-accent-dark: $color-accent-dark;
+$surface-bg-accent-light: $color-accent-light;
+$surface-bg-dark: $color-bg-dark;
+$surface-bg-dark2: $color-bg-dark2;
+$surface-bg-default: $color-bg-default;
+$surface-bg-light: $color-bg-light;
+$surface-bg-white: $color-white;
+$text-color-accent-dark: $color-accent-dark;
+$text-color-accent-light: $color-accent-light;
+$text-color-accent-secondary: $color-accent-secondary;
+$text-color-dark: $color-bg-dark2;
+$text-color-default: $color-white;
+$text-color-light: $color-bg-dark;
+$text-color-mutted: $color-bg-default;
+
+// CSS color variables
+@mixin generate-variables {
+    @each $variable-name, $variable-value in 
+      "btn-bg-accent-dark" $btn-bg-accent-dark,
+      "btn-bg-accent-light" $btn-bg-accent-light,
+      "btn-bg-default" $btn-bg-default,
+      "surface-bg-accent-dark" $surface-bg-accent-dark,
+      "surface-bg-accent-light" $surface-bg-accent-light,
+      "surface-bg-dark" $surface-bg-dark,
+      "surface-bg-dark2" $surface-bg-dark2,
+      "surface-bg-default" $surface-bg-default,
+      "surface-bg-light" $surface-bg-light,
+      "surface-bg-white" $surface-bg-white,
+      "text-color-accent-light" $text-color-accent-light,
+      "text-color-accent-dark" $text-color-accent-dark,
+      "text-color-accent-secondary" $text-color-accent-secondary,
+      "text-color-default" $text-color-default,
+      "text-color-light" $text-color-light,
+      "text-color-dark" $text-color-dark,
+      "text-color-mutted" $text-color-mutted,
+      "font-family-primary" $font-family-primary,
+      {
+      --#{$pref}#{$variable-name}: #{$variable-value};
+    }
+}
+    
+:root {
+    @include generate-variables;
+}
+
+// CSS utility classes
+.btn-bg-accent-dark{
+    background-color: var(--#{$pref}btn-bg-accent-dark);
+}
+
+.btn-bg-accent-light{
+    background-color: var(--#{$pref}btn-bg-accent-light);
+}
+
+.btn-bg-default{
+    background-color: var(--#{$pref}btn-bg-default);
+}
+    
+.surface-bg-accent-dark{
+    background-color: var(--#{$pref}surface-bg-accent-dark);
+}
+    
+.surface-bg-accent-light{
+    background-color: var(--#{$pref}surface-bg-accent-light);
+}
+    
+.surface-bg-dark{
+    background-color: var(--#{$pref}surface-bg-dark);
+}
+    
+.surface-bg-dark2{
+    background-color: var(--#{$pref}surface-bg-dark2);
+}
+    
+.surface-bg-default{
+    background-color: var(--#{$pref}surface-bg-default);
+}
+    
+.surface-bg-light{
+    background-color: var(--#{$pref}surface-bg-light);
+}
+    
+.text-color-accent-light{
+    color: var(--#{$pref}text-color-accent-light);
+}
+    
+.text-color-accent-dark{
+    color: var(--#{$pref}text-color-accent-dark);
+}
+
+.text-color-accent-secondary{
+    color: var(--#{$pref}text-color-accent-secondary);
+}
+    
+.text-color-default{
+    color: var(--#{$pref}text-color-default);
+}
+    
+.text-color-light{
+    color: var(--#{$pref}text-color-light);
+}
+    
+.text-color-dark{
+    color: var(--#{$pref}text-color-dark);
+}
+
+.text-color-mutted{
+    color: var(--#{$pref}text-color-mutted);
+}
+    
+.font-family-primary{
+    color: var(--#{$pref}font-family-primary);
+}
