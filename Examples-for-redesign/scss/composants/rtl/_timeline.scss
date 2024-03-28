@@ -1,0 +1,8 @@
+ul.timeline:before {
+    left: inherit;
+    right: 29px;
+}
+ul.timeline > li:before {
+    left: inherit;
+    right: 20px;
+}

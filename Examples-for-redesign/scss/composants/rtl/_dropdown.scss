@@ -1,0 +1,37 @@
+.dropdown-menu {
+    left: 0;
+    right: inherit;
+    text-align: right;
+    span.active {
+        padding: 0 $s-3 0 0 !important;
+    }
+    li a.active:after, 
+    a.active:after,
+    span.active.active:after {
+        right: $s-1;
+        left: inherit;
+    } 
+}
+.dropdown-logo {
+    .dropdown-toggle::after {
+        right: inherit;
+        left: $s-3;
+    }
+    .users .info {
+        float: right;
+    }
+    .dropdown-item {
+        .btn {
+            float: left;
+        }
+    }
+}
+.dropdown-menu.dropdown-notification {
+    li {
+        padding: $s-3 40px $s-3 $s-3;
+        i {
+            right: $s-3;
+            left: inherit;
+        }
+    }
+}

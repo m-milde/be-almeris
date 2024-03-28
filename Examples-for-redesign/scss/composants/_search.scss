@@ -1,0 +1,31 @@
+.result-search {    
+	position: absolute;
+    margin-top: 48px;
+    z-index: 999;
+    background: var(--white);
+	@extend %radius;
+	@extend %shadow;
+	padding: $s-3;
+	width: 100%;
+	
+	.search-plus {
+		display: block;
+		width: 100%;
+		padding: 0 $s-4;
+		line-height: $s-5;
+		margin-top: $s-2 !important;
+		text-align: left;
+		background: var(--white);
+		color: var(--title);
+		height: auto;
+		@extend %small;
+		display: flex!important;
+		justify-content: space-between!important;
+		&:hover {
+			background: var(--element);
+		}
+		.keyboard {
+			margin-top: 7px;
+		}
+	}
+}

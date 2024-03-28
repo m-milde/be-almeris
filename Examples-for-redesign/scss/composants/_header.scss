@@ -1,0 +1,11 @@
+header {
+	z-index: 6 !important;
+	@extend %anim;
+	position: relative;
+	background: var(--background);
+	&.bg-white {
+		background-color: rgba(var(--white-rgb), 0.84) !important;
+		backdrop-filter: blur(12px);
+		backdrop-filter: blur(12px);
+	}
+}

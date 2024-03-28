@@ -1,0 +1,7 @@
+.breadcrumb-item + .breadcrumb-item::before {
+    padding-left: 2px;
+    float: right;
+}
+.breadcrumb li.active:before {
+    right: -2px;
+}

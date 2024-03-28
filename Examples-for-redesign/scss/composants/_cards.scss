@@ -1,0 +1,165 @@
+.card {
+	margin: 0 0 $s-3;
+	padding: 0;
+	@extend %radius;
+	border:0;
+	background: var(--white);
+	width: 100%;
+	
+	.card-header { 
+		background:none;
+		padding: $s-4 $s-5 $s-2;
+		color:var(--title);
+		border: 0;
+		h1, 
+		h2, 
+		h3, 
+		h4, 
+		h5, 
+		p {
+			padding: 0;
+			min-height:auto;
+			margin:0 0 $s-2;
+		}
+		a img {
+			width: 100%;
+		}
+		a.img:hover img {
+			box-shadow: 0 2px 12px rgba($valid-300, .2);
+			@extend %anim;
+		}
+
+	}
+	.card-body {
+		padding: $s-4 $s-5;
+		h2, h3 {
+			padding: 0;
+			min-height:auto;
+			margin:0 0 $s-2;
+			
+		}
+		.desc {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			height: 20px;
+		}
+		a {
+			&:hover, 
+			&:focus,
+			&:focus-within {
+				text-decoration: none;
+			}
+		}
+	}
+	.card-footer {
+		padding: $s-3 $s-5;
+		background: none;
+	}
+	.card-button {
+		position: absolute;
+		right: 0;
+		top: $s-3;
+	}
+	.card-button {
+		right: $s-1;
+	}
+}
+
+a.linkcard {
+	@extend %anim;
+	@extend %radius;
+	@extend %shadow;
+	background: var(--white);
+	margin-bottom: $s-3;
+	display: flex;
+	box-shadow: none;
+	&:hover, 
+	&:focus,
+	&:focus-within {
+		box-shadow: 2px $s-1 $s-4 rgba(#000000, .04);
+		background: var(--white) !important;
+		text-decoration: none;
+	}
+	.card {
+		box-shadow: none;
+		background: none;
+		margin: 0;
+		.card-header {
+			padding-top: $s-4;
+		}
+		.card-body {
+			padding: 0 $s-5 $s-4;
+		}
+	}
+	span.icon {
+		background: var(--background);
+		@extend %radius;
+		height: 42px;
+		width: 42px;
+		line-height: 42px;
+		display: inline-block;
+		padding: 10px 0;
+		position: relative;
+		overflow: hidden;
+	}
+	&.active {
+		span.icon {
+			background-color: var(--primary-100);
+			i {
+				display: none;
+			}
+			&:after {
+				content: map-get($webfont-icons, 'checkmark');
+				font-family: "iconfont";
+				color: var(--white);
+				font-size: 20px;
+				top: -10px;
+				left: 0;
+				position:relative;
+			}
+		}
+	}
+	&.disabled {
+		&:hover {
+			box-shadow: none;
+		}
+		&.active {
+			span.icon {
+				background: var(--background);
+				i {
+					display: block;
+				}
+			}
+		}
+	}
+	&.selected {
+		background: var(--primary-300);
+		h1, h2, h3, p, small, b, label {
+			color: var(--white) !important;
+		}
+		&:hover,
+		&:focus {
+			background: var(--primary-300) !important;
+		}
+	}
+}
+
+.card {
+	.logo {
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+		opacity: .2;
+		@extend %anim;
+	}
+	&:hover .logo {
+		-webkit-filter: grayscale(0%);
+		filter: grayscale(0%);
+		opacity: 1;
+		@extend %anim;
+	}
+}
+section.bg-background .card,
+section.bg-transparent .card {
+	background: var(--white);
+} 

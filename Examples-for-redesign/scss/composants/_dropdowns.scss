@@ -1,0 +1,232 @@
+.dropdown {
+	padding:0;
+	display: inline-block;
+	&:last-child {
+		margin-left: 0;
+	}
+}
+.dropdown-toggle {
+	padding: 0 $s-5 0 $s-3;
+	text-align: left;
+	position: relative;
+	&::after {
+		content:map-get($webfont-icons, 'arrow-ios-downward');
+		font-family: beys-iconfont !important;
+		vertical-align: -1px;
+		border: none;
+		margin-left:$s-2;
+		right: $s-3;
+		position: absolute;
+		top: 1px;
+	}
+}
+.dropdown-menu {
+	border:0; 
+	position:absolute;
+	margin:$s-1 0;
+	@extend %radius;
+	z-index: 99;
+	font-size: $s-3;
+	color: var(--text);
+	min-width: 230px;
+	max-width: 230px;
+	background: var(--white);
+	@extend %shadow;
+	padding: $s-1 $s-3 !important;
+	right: 0;
+	border: 1px solid var(--border);
+	&.dropdown-menu-right {
+		right: 0;
+		left: auto;
+	}
+	span.active {
+		padding-right: 0 !important;
+		&:hover {
+			i {
+				color:var(--title) !important;
+			}
+		} 
+		.btn-i {
+			margin: 0;
+			float: right;
+			i {
+				color:var(--title) !important;
+				margin: 0;
+				padding: 0;
+			}
+			&:hover {
+				i {
+					color: var(--title);
+				}
+			}
+		}
+	}
+	li {
+		width: 100%;
+		font-size: 1em;
+		&:first-child {
+			margin-top: $s-1;
+		}
+		&:last-child {
+			margin-bottom: $s-1;
+		}
+	}
+	li a, a, span.active {
+		display:block;
+		padding: 0 $s-3 0 $s-3;
+		text-decoration: none;
+		color: var(--text);
+		line-height: $s-5;
+		border-bottom: 0;
+		height: $s-5;
+		position: relative;
+		font-weight: 400;
+		min-width: 180px;
+		text-transform: none;
+		font-size: $s-3;
+		i {
+			font-size: 1.2em;
+			padding: 0;
+			text-align: center;
+			color: var(--prompt);
+			margin-right: $s-3;
+			line-height: $s-5;
+			&.icon-external-link {
+				position: absolute;
+				margin-left: $s-2;
+			}
+		}
+		&:hover {
+			color: var(--title);
+			border-bottom: 0;
+			background-color: var(--element);
+			border-radius: $s-2;
+			
+			i {
+				color: var(--title);
+				&.icon-external-link {
+					color: var(--title);
+				}
+			}
+		}
+		&:focus {
+			color: var(--title);
+			border-bottom: 0;
+			background-color: var(--accessibility);
+			border-radius: $s-2;
+			i {
+				color: var(--title);
+				&.icon-external-link {
+					color: var(--title);
+				}
+			}
+		}
+		&.active {
+			background: transparent;
+			color: var(--title);
+			font-weight: 700;
+			position: relative;
+			&:after {
+				content: "";
+				height: 20px;
+				width: 2px;
+				background: var(--primary-100);
+				position: absolute;
+				left: $s-1;
+				top: 6px;
+				border-radius: 1px;
+			}
+		}
+	}
+	.divider {
+		margin:0;
+	}
+	a {
+		text-decoration: none;
+	}
+	&.dropdown-notification {
+		max-height: 300px;
+		overflow-y: auto;
+		min-width: 400px;
+
+		li {
+			line-height: 1.6;
+			height: auto;
+			white-space: inherit;
+			position: relative;
+			div {
+				padding: $s-2;
+				a {
+					padding: 0;
+					color: var(--primary-100);
+					&:hover {
+						color: var(--primary-200);
+						background-color: transparent;
+					}
+					&:focus {
+						color: var(--primary-300);
+					}
+				}
+				div {
+					display: inline-block;
+					padding: 0;
+					width: calc(100% - 52px);
+				}
+			}
+			i {
+				font-size: 20px;
+				margin: 0 $s-3 0 $s-2;
+			}
+			a {
+				height: auto;
+				width: auto;
+				display:inherit;
+				padding: 0;
+				line-height: 1.6;
+				padding: $s-2;
+				color: var(--text);
+				div {
+					display: inline-block;
+					padding: 0;
+					width: calc(100% - 52px);
+				}
+			}
+			.date {
+				position: absolute;
+				right: $s-4;
+				top: $s-3;
+				color: var(--prompt);
+			}
+		}
+	}
+}
+.dropdown-menu>.active>a i {color:var(--primary-100) !important;}
+.no-carret:after {display:none;}
+.dropdown-divider {
+	border-top: 1px solid var(--border);
+	margin: $s-2 0;
+}
+.dropdown-logo {
+	height: 60px;
+	display: block;
+	padding: $s-1 $s-3;
+	margin-bottom: $s-4;
+}
+.dropdown-logo .btn.dropdown-toggle {
+	margin: 0;
+	height: 52px;
+	line-height: 52px;
+	font-size: 1.2em;
+	color: var(--title);
+	padding: 6px;
+}
+.dropdown-item.active, 
+.dropdown-item:active {
+	background: var(--accessibility);
+	@extend %radius;
+}
+@media screen and (max-width: 991px) {
+	.dropdown-logo {
+		margin-top: $s-6;
+	}
+}

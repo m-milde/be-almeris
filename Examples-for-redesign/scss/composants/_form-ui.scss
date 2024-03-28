@@ -1,0 +1,60 @@
+.form-ui {
+	position: relative;
+	margin: 0 0 12px 0;
+	input {
+		margin-bottom: 0 !important;
+		background: none;
+		padding: 20px 8px 8px 8px;
+		display: block;
+		border: none;
+		border-bottom: 1px solid var(--border);
+		border-radius: 0 !important;
+		height: 52px;
+		color: var(--text);
+		&:focus {
+			outline: none;
+			border-bottom: 1px solid var(--title);
+		}
+		&:focus ~ label, 
+		&:valid ~ label {
+			top: 4px;
+			font-size: 11px;
+			color: var(--prompt);
+		}
+	}
+	label {
+		color: var(--text);
+		font-size: 13px;
+		font-weight: normal;
+		position: absolute;
+		pointer-events: none;
+		left: 12px;
+		top: 23px;
+		transition: 0.2s ease all;
+		-moz-transition: 0.2s ease all;
+		-webkit-transition: 0.2s ease all;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 100%;
+	}
+	&.form-error {
+		input {
+			border-bottom: 1px solid $error-100;
+			&:focus {
+				border-bottom: 1px solid $error-100;
+			}
+		}
+		p {
+			margin:4px 12px;
+			i {
+				float: left;
+				margin:0 4px 0 0;
+				font-size: 20px;
+				color: $error-100;
+				position: relative;
+				top: 2px;
+			}
+		}
+	}
+}

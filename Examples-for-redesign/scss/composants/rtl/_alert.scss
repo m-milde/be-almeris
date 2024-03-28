@@ -1,0 +1,13 @@
+.alert {
+    i {
+        right: $s-4;
+        left: inherit;
+    }
+    button.close,
+    button.btn-close {
+        position: absolute;
+        right: initial;
+        top: 10px;
+        left: $s-1;
+    }
+}

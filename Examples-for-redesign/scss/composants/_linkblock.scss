@@ -1,0 +1,89 @@
+a.linkblock {
+	padding: $s-3 $s-4 $s-3 $s-6;
+	position: relative;
+	display:inline-block;
+	color: var(--title);
+	margin-bottom: $s-4;
+	&.actif {
+		font-weight: 700;
+	}
+	span {
+		display: inline-block;
+	}
+	.numbers {
+		font-size: 40px;
+		position: absolute;
+		margin-left: $s-3;
+		top:15px;
+	}
+	p {
+		color:var(--text);
+	}
+	&::after {
+		content:"";
+		position:absolute;
+		top: 21px;
+		left: 21px;
+		height: 6px;
+		width: 6px;
+		background: var(--element);
+		border-radius: 50%;
+		@extend %anim;
+		z-index: 0;
+	}
+	&:hover,
+	&:focus {
+		background:none !important;
+		&::after {
+			top: -3px;
+			left: -3px;
+			height: $s-6;
+			width: $s-6;
+			@extend %anim;
+		}
+	}
+	&::before {
+		content:"";
+		position:absolute;
+		top: 21px;
+		left:21px;
+		height:6px;
+		width:6px;
+		background: var(--primary-100);
+		@extend %radius;
+		z-index: 1;
+	}
+	&:hover, 
+	&:focus {
+		text-decoration:none;
+		color: inherit;
+		h3, p {
+			text-decoration: none;
+		}
+	}
+	h3, p {
+		margin-top: $s-1;
+		z-index: 2;
+		position: relative;
+	}
+	
+	&.linkblock-error {
+		&::before {
+			background: $error-100 !important;
+		}
+		.numbers {
+			color: $error-100;
+		}
+	}
+	&.linkblock-empty {
+		&::before {
+			background: var(--prompt) !important;
+		}
+		h3 {
+			.numbers {
+				color: var(--prompt);
+			}
+		}
+	}
+}
+

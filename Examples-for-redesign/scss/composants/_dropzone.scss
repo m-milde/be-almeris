@@ -1,0 +1,57 @@
+.dz-success-mark, 
+.dz-error-mark {
+    display: none;
+}
+.dz-default {
+    width:100%;
+    border:dashed 2px var(--border);
+    text-align: center; 
+    background:none; 
+    font-size: 1.2rem;
+    border-radius: $s-1;
+    cursor: pointer;
+    margin-bottom:$s-4;
+    padding: $s-4 $s-6;
+    @extend %radius;
+}
+.dz-border-white {
+    border:1px dashed var(--white);
+}
+.dz-error-message {
+    color:$error-100;
+}
+#Files {
+    padding:$s-3 0;
+	.alert {
+        box-shadow:none;
+        border:1px solid var(--border);
+        margin-bottom:$s-3;
+        border-radius: 0;
+        margin: 0;
+    }
+    .alert.AlertWhite.Sucess {
+        color:$valid-100; 
+        font-size:18px;
+    }
+    .alert.AlertWhite.Error {
+        color:$error-100; 
+        font-size:18px;
+    }
+}
+.dz-preview {
+    margin-top:$s-3;
+    .dz-image {
+        width:$s-6;
+        padding: 0;
+        border:1px solid var(--border);
+        float:left;
+        border-radius:$s-2;
+        background: var(--white);
+        margin-right:$s-5;
+        overflow: hidden;
+        img {
+            width:100%;
+            height:auto;
+        }
+    }
+}

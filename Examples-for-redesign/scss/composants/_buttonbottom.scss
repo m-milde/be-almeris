@@ -1,0 +1,112 @@
+#BtnInfo {
+	@extend %anim;
+	position: fixed;
+	right: $s-5;
+	bottom: $s-5;
+	z-index: 999;
+	button.btn-alert {
+		height: $s-6;
+		width: $s-6;
+		box-shadow: 0 $s-2 $s-5 rgba(#000000, .3);
+		margin: 0;
+		.icon {
+			padding: 13px;
+			height: $s-6;
+			width: $s-6;
+			top: 0;
+			left: 0;
+			span {
+				padding:0;
+				display: block;
+				@extend %anim;
+			}
+			span.trace1 {
+				border: 2px solid var(--white);
+				height: 27px;
+				width: 27px;
+				border-radius: 50%;
+				opacity: 1;
+			}
+
+			span.trace2,
+			span.trace3 {
+				background: var(--white);
+				border-radius: $s-1;
+				width: 3px;
+				position: absolute;
+				left: 25px;
+			}
+			span.trace2 {
+				height: $s-2;
+				top: 25px;
+			}
+			span.trace3 {
+				height:3px;
+				top: 20px;
+			}
+		}
+		&:hover {
+			.icon {
+				padding: 6px;
+				span.trace1 {
+					height: 40px;
+					width: 40px;
+					opacity: 0;
+				}
+				span.trace3 {
+					top: 16px;
+				}
+			}
+		}
+	}
+	.alert {
+		width: 490px;
+		left: 40px;
+		bottom: $s-3;
+		position: absolute;
+		box-shadow: 0 $s-1 $s-5 rgba(#000000, .3);
+		opacity: 0;
+		@extend %anim;
+		z-index: -1;
+	}
+	&.open { 
+		button.btn-alert {
+			.icon {
+				span {
+					@extend %anim;
+				}
+				span.trace1 {
+					height: $s-5;
+					width: $s-5;
+					opacity: 0;
+				} 
+				span.trace2 {
+					transform: rotate(45deg);
+					height: 16px;
+					left: 25px;
+					top: 18px;
+				}
+				span.trace3 {
+					transform: rotate(-45deg);
+					height: 16px;
+					left: 25px;
+					top: 18px;
+				}
+			}
+
+			&:hover {
+				.icon {
+					span.trace3 {
+						top: 18px;
+					}
+				}
+			}
+		}
+		.alert {
+			width: 490px;
+			opacity: 1;
+			left: -453px;
+			bottom: 12px;
+		}
+	}
+}

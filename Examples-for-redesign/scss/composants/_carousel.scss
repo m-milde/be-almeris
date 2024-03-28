@@ -1,0 +1,44 @@
+
+.carousel {
+    .carousel-control-next,
+    .carousel-control-prev {
+        right: 0;
+        height: $s-5;
+        width: $s-5;
+        display: block;
+        margin-top: 35% !important;
+        background: var(--primary-100);
+        border-radius: 50% !important;
+        padding: 6px;
+        opacity: 1;
+        i {
+            color: var(--white);
+            @extend %anim;
+            position: static;
+        }
+        &:hover {
+            background: var(--primary-200);
+        }
+        &:active,
+        &:focus {
+            background: var(--primary-300) !important;
+        }
+    }
+    .carousel-control-next,
+    .btn:last-child, a.btn:last-child, button:last-child {
+        margin-right: -$s-6 !important;
+        &:hover {
+            i {
+                margin-left:2px;
+            }
+        }
+    }
+    .carousel-control-prev {
+        margin-left: -$s-6 !important;
+        &:hover {
+            i {
+                margin-left:-$s-1;
+            }
+        }
+    }
+}

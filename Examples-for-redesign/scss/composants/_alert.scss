@@ -1,0 +1,123 @@
+.alert {
+	border:0;
+	@extend %radius;
+	background: var(--white);
+	padding: $s-4 $s-6;
+	border: 1px solid var(--border);
+	i {
+		left: $s-4;
+		margin-top: -1px;
+		position: absolute;
+	}
+	h3, .h3, p {
+		margin:0 0 $s-1;
+	} 
+	p {
+		font-size: 13px;
+		opacity: .84;
+	}
+	h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5, p, b, em, a {
+		color: var(--title);
+	}
+	button.close,
+	button.btn-close {
+		text-shadow:none;
+		color: var(--prompt);
+		padding: 10px $s-2 !important;
+		opacity: 0.84;
+		@extend %radius;
+		text-shadow:none;
+		position: absolute;
+		margin-top: $s-3;
+		right: $s-3;
+		background: var(--secondary-200);
+		height: 40px;
+		width: 40px;
+		&:hover, &:focus {
+			opacity:1;
+			outline: none;
+			background: var(--secondary-300);
+		}
+		i {
+			position: static;
+			margin: 0;
+			font-size: $s-4;
+		}
+	}
+
+	// Colors
+	&.alert-error,
+	&.alert-danger {
+		background: $error-12;
+		border:1px solid $error-20;
+		i {
+			color: $error-100;
+		}
+		button.close {
+			color: $error-100;
+			background: $error-12;
+			&:hover,
+			&:focus {
+				background: $error-20;
+				i {
+					color: $error-100;
+				}
+			}
+		}
+	}
+	&.alert-warning {
+		background: $warning-12;
+		border:1px solid $warning-20;
+		i {
+			color: $warning-100;
+		}
+		button.close {
+			color: $warning-100;
+			background: $warning-12;
+			&:hover,
+			&:focus {
+				background: $warning-20;
+				i {
+					color: $warning-200;
+				}
+			}
+		}
+	}
+	&.alert-success,
+	&.alert-primary {
+		background: var(--primary-12);
+		border:1px solid var(--primary-20);
+		i {
+			color: var(--primary-100);
+		}
+		button.close {
+			color: $valid-100;
+			background: var(--primary-12);
+			&:hover,
+			&:focus {
+				background: var(--primary-20);
+				i {
+					color: $valid-200;
+				}
+			}
+		}
+	}
+	&.alert-info {
+		background: $info-12;
+		border:1px solid $info-20;
+		i {
+			color: $info-100;
+		}
+		button.close {
+			color: $info-100;
+			background: $info-12;
+			&:hover,
+			&:focus {
+				background: $info-20;
+				i {
+					color: $info-200;
+				}
+			}
+		}
+	}
+}

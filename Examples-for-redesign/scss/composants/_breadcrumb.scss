@@ -1,0 +1,80 @@
+.breadcrumb {
+	background: transparent;
+	text-transform: uppercase;
+	padding: 0;
+	margin-bottom: 0;
+	@extend %small;
+	.back span {
+		top: 6px;
+		position: relative;
+	}
+	li {
+		display: inline-block;
+		a {
+			letter-spacing: .4;
+			padding: 2px $s-1;
+			text-decoration: none;
+			display: inline-block;
+			@extend %radius;
+			line-height: $s-5;
+		}
+		&::before {
+			float: left;
+			color: var(--prompt);
+			opacity: .52;
+			@extend %small;
+			padding-right: 0;    
+			top: 1px;
+			position: relative;    
+		}
+		a {
+			color:var(--text);
+			&:hover {
+				color: var(--title);
+				background: var(--element);
+			}
+		}
+		&.active {
+			padding: $s-1;
+			color: var(--title);
+			line-height: $s-5;
+			&:before {
+				left: -5px;
+				top: 1px;
+			}
+		}
+	}  
+}
+
+.breadcrumb-item + .breadcrumb-item {
+	padding-left:0;
+	&::before {
+		padding: 0;
+	}	
+}
+.breadcrumb li.active a {
+	color: var(--title);
+	font-weight: 500;
+	background: var(--element);
+}
+
+.breadcrumb .is-hidden {
+	display: none;
+}
+.breadcrumb-ellipsis {
+	padding:  0 4px !important;
+}
+.breadcrumb-dropdown {
+	display: inline-block;
+}
+
+.breadcrumb > li.breadcrumb-ellipsis.is-hidden + li:before {
+	display: none;
+}
+.breadcrumb-toggle {
+	padding: $s-2 $s-2 0 !important;
+}
+@media screen and (max-width: 768px) {
+	.breadcrumb {
+	}
+}

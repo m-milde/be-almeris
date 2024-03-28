@@ -1,0 +1,139 @@
+a.nav-icon {
+    right:$s-4;
+}
+.sidebar {
+    right: 0;
+    ul.nav {
+        li.sub-menu {
+            a {
+                padding: 0 70px 0 $s-3;
+                i {
+                    margin: 0 0 0 $s-3;
+                    right: $s-5;
+                }
+            }
+            &.active {
+                &::after {
+                    right: 0;
+                }
+            }
+            ul {
+                li {
+                    a {
+                        font-size: $s-3;
+                        padding: 0 70px 0 $s-3;
+                        margin: 0;
+                        line-height:26px;
+                        color: var(--text) !important;
+                        font-weight: 400;
+                    } 
+                }
+            }
+        }
+    }
+    &.sidebar-no-icon ul.nav li.sub-menu ul li a {
+        padding: 0 $s-5 0 $s-3 !important;
+    }
+}
+&.sidebar-close {
+    .sidebar,
+    .footer-sidebar  {
+        right:-320px;
+    }
+    .main-sidebar {
+        margin-right: 0;
+    }
+    .navbar.navbar-sidebar {
+        margin: 0 45px;
+    }
+}
+.btn-sidebar {
+    right: 264px;
+    opacity: 1;
+    &:hover, &:focus {
+        span {
+            animation-name: flipright;
+        }
+    }
+    span { 
+        &.trace_1 {
+            transform: rotate(-45deg);
+        }
+        &.trace_2 {
+            transform: rotate(45deg);
+        }
+    }
+    &.close {
+        right: $s-3;
+        span { 
+            &.trace_1 {
+                transform: rotate(45deg) !important;
+            }
+            &.trace_2 {
+                transform: rotate(-45deg) !important;
+            }
+        }
+    }
+}
+.btn-sidebar.close:hover {
+    span {
+        animation-name: flipleft;
+    }
+    + .sidebar {
+        right: -293px;
+    }
+}
+.btn-sidebar:hover {
+    span {
+        animation-name: flipright;
+    }
+    + .sidebar {
+        right: -$s-5;
+    }
+}
+@media screen and (max-width: 1200px) { 
+	.sidebar,
+	.sidebar-right {
+		width:260px;
+	}
+	&.sidebar-close .sidebar {
+		right:-260px;
+        left: inherit;
+	}
+	&.sidebar-close .sidebar-right {
+		right: inherit;
+		left: -260px;
+	}
+	.btn-sidebar {
+		right: 200px;
+        left: inherit;
+		&.close:hover {
+			+ .sidebar {
+				right: -230px;
+                left: inherit;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.sidebar {
+		width:320px;
+		right:-320px;
+        left: inherit;
+		&.sidebar-right {
+			display: none;
+		}
+	}
+	&.sidebar-close .sidebar {
+		right:-320px;
+        left: inherit;
+	}
+	.btn-sidebar {
+		display: none;
+	}
+	.sidebar-open {
+		right: 0 !important;
+        left: inherit !important;
+	}
+}

@@ -1,0 +1,218 @@
+.list-group {
+	margin-bottom: $s-3;
+	padding: 0;
+	.icon-list {
+		display: flex!important;
+		justify-content: flex-start !important;
+		span {
+			padding: 2px $s-2;
+			font-weight: 600 !important;
+			font-size: 1em !important;
+		}
+	}
+	.list-group-item {
+		border:0;
+		padding: $s-1 $s-4;
+		height: auto;
+		min-height: $s-5;
+		background:transparent;
+		color: var(--text);
+		&::before {
+			content: "";
+			height: calc(100% - 4px);
+			width: $s-1;
+			background-color:transparent;
+			position: absolute;
+			top: 2px;
+			left: 1px;
+			border-radius: 2px;
+		}
+		&.active {
+			background-color: var(--element);
+			color: var(--text);
+			&::before {
+				content: "";
+				height: calc(100% - 4px);
+				width: 2px;
+				background-color: var(--primary-100);
+				position: absolute;
+				top: 2px;
+				left: 1px;
+				border-radius: 2px;
+			}
+		}
+		&.list-group-item-primary,
+		&.list-group-item-success {
+			&::before {
+				content:'';
+				background-color: var(--primary-100);
+			}
+		}
+		&.list-group-item-secondary,
+		&.list-group-item-dark {
+			&::before {
+				background-color: var(--dark);
+			}
+		}
+		&.list-group-item-danger,
+		&.list-group-item-error {
+			&::before {
+				background-color: $error-100;
+			}
+		}
+		&.list-group-item-warning {
+			&::before {
+				background-color: $warning-100;
+			}
+		}
+		&.list-group-item-info {
+			&::before {
+				background-color: $info-100;
+			}
+		}
+		&.list-group-item-light {
+			&::before {
+				background-color: var(--element);
+			}
+		}
+	}
+
+	&.list-group-flush {
+		.list-group-item {
+			border-bottom:1px solid var(--border);
+			&:last-child {
+				border: 0 !important;
+			}
+			&:hover .users .initiale.bg-background {
+				background: var(--element) !important;
+			}
+		}
+	}
+	
+	a.list-group-item {
+		&.active {
+			background-color: var(--element);
+			color: var(--text);
+			&:hover {
+				background-color: var(--accessibility);
+				color: var(--title);
+			}
+		}
+		&::before {
+			content: "";
+			height: 35px;
+			width: $s-1;
+			background-color: transparent !important;
+			position: absolute;
+			top: 2px;
+			left: 1px;
+			border-radius: 2px;
+		}
+		&:hover {
+			background-color: var(--accessibility);
+			color: var(--title);
+		}
+		
+		
+		&.list-group-item-action:hover {
+			background-color: var(--element);
+		}
+		&.list-group-item-primary:hover,
+		&.list-group-item-primary:focus,
+		&.list-group-item-success:hover,
+		&.list-group-item-success:focus {
+			&::before {
+				background-color: var(--primary-100) !important;
+			}
+		}
+		&.list-group-item-secondary:hover,
+		&.list-group-item-secondary:focus,
+		&.list-group-item-dark:hover,
+		&.list-group-item-dark:focus {
+			&::before {
+				background-color: var(--dark) !important;
+			}
+		}
+		&.list-group-item-danger:hover,
+		&.list-group-item-danger:focus,
+		&.list-group-item-error:hover,
+		&.list-group-item-error:focus {
+			&::before {
+				background-color: $error-100 !important;
+			}
+		}
+		&.list-group-item-warning:hover,
+		&.list-group-item-warning:focus {
+			&::before {
+				background-color: $warning-100 !important;
+			}
+		}
+		&.list-group-item-info:hover,
+		&.list-group-item-info:focus {
+			&::before {
+				background-color: $info-100 !important;
+			}
+		}
+		&.list-group-item-light:hover,
+		&.list-group-item-light:focus {
+			&::before {
+				background-color: var(--element) !important;
+			}
+		} 
+	}
+}
+
+.list-link {
+	padding: 0;
+	margin: 0;
+	li {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		a {
+			padding: $s-1;
+		}
+	}
+}
+
+.list-group {
+	.list-group-item {
+		font-weight: 400;
+		span {
+			font-weight: 400;
+			color: var(--prompt);
+			@extend %small;
+		}
+	}
+	.icon-list {
+		display: flex!important;
+		justify-content: flex-start !important;
+		span {
+			padding:0 $s-2;
+			font-weight: 600 !important;
+			font-size: 1em !important;
+			color: var(--text);
+		}
+		i {
+			margin-top: 1px;
+		}
+	}
+}
+ul.puce {
+	margin-bottom: $s-4;
+	padding: 0;
+	li {
+		list-style: none;
+		padding-left: 40px;
+		position: relative;
+		&::before {
+			content: '';
+			background: url(../images/puce-branding.svg) no-repeat top left;
+			height: $s-2;
+			width: $s-2;
+			left: $s-2;
+			top: $s-2;
+			position: absolute;
+		}
+	}
+}

@@ -1,0 +1,141 @@
+#KeyboardShortcuts {
+    p {
+        font-size: .84em;
+        margin-bottom: $s-1;
+    }
+    span.letters {
+        background-color: var(--accessibility);
+        color: var(--text);
+        font-weight: 600;
+        border-radius: $s-1;
+        padding: 6px;
+        text-align: center;
+        margin: 0 $s-2;
+        font-size: .75rem !important;
+        display: inline-block;
+        min-width: 27px;
+        height: 27px;
+    }
+}
+
+.keyboard {
+    display: none;
+    height: $s-4;
+    min-width: $s-4 !important;
+    width: auto;
+    line-height: 18px;
+    border-radius: $s-1;
+    background-color: var(--accessibility);
+    color: var(--text) !important;
+    padding: $s-1 2px;
+    text-align: center;
+    margin: 0 0 0 $s-1;
+    position: relative;
+    z-index:1;
+    font-size: .65rem !important;
+    line-height: 10px;
+    top: -1px;
+    right: $s-1;
+}   
+.viewkeyboard {
+    .initiale .keyboard {
+        top: 0;
+    }
+    .keyboard {
+        display: inline-block;
+    }
+    .input-group .keyboard {
+        position: absolute;
+        right: 42px;
+        top: 10px;
+        margin-top: 0;
+    }
+    .btn-icon .keyboard {
+        left: -10px;
+    }
+    .btn-sidebar {
+        width: 54px;
+        left: 250px;
+        .keyboard {
+            position: absolute;
+            top: 10px;
+        }
+    }
+    .sidebar {
+        ul.nav li.sub-menu a {
+            padding-right: $s-5;
+            .keyboard {
+                position: absolute;
+                top: 16px;
+                right: $s-2;
+                left: inherit;
+            }
+        }
+    }
+    .modal .modal-dialog .modal-content .close {
+		right: $s-2;
+		left: inherit;
+        padding-right: 26px;
+		padding-left: $s-2;
+        .keyboard {
+            top: 10px;
+            position: absolute;
+            right: 0;
+            margin-right: $s-1;
+        }
+    }
+    .btn {
+        &.btn-primary,
+        &.btn-dark,
+        &.btn-error {
+            .keyboard {
+                color: var(--white) !important;
+            }
+        }
+    }
+    .btn-keyboard {
+		padding-left: $s-3;
+        padding-right: 24px !important;
+        position: relative;
+        i {
+            padding: 0 $s-1 0 0;
+        }
+        .keyboard {
+            position: absolute;
+            top: 10px !important;
+        }
+    }
+    // Affichage 
+    .d-flex {
+        .btn-keyboard {
+            padding-right: $s-5 !important;
+        }
+    }
+    .sidebar {
+        .dropdown {
+            .keyboard {
+                top: -17px;
+            }
+        }
+    }
+}
+.touch {
+    display: inline-block;
+    height: $s-4;
+    min-width: $s-4 !important;
+    width: auto;
+    line-height: 18px;
+    border-radius: $s-1;
+    background-color: var(--accessibility);
+    color: var(--text) !important;
+    padding: 5px $s-1;
+    text-align: center;
+    margin: 0 0 0 $s-1;
+    color: var(--title) !important;
+    position: relative;
+    z-index:1;
+    font-size: .65rem !important;
+    line-height: 10px;
+    top: -1px;
+    right: 2px;
+}

@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../fonts/titillium/TitilliumWeb-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../fonts/titillium/TitilliumWeb-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../fonts/titillium/TitilliumWeb-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../fonts/titillium/TitilliumWeb-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.color-primary,
+.color-primary a {color: var(--primary-100) !important;}
+
+.color-valid,
+.color-valid a,
+.color-success,
+.color-success a {color: $valid-300 !important;}
+
+.color-error,
+.color-error a {color: $error-100 !important;}
+
+.color-warning,
+.color-warning a {color: $warning-100 !important;}
+
+.color-info,
+.color-info a {color: $info-100 !important;}
+
+.color-white,
+.color-white a {color: var(--white) !important;}
+
+.color-title,
+.color-title a {color: var(--title) !important;}
+
+.color-text,
+.color-text a  {color: var(--text) !important;}
+
+.color-prompt, 
+.color-prompt a {color: var(--prompt) !important;}
+
+.uppercase {
+	text-transform: uppercase !important;
+	letter-spacing: 1px !important;
+}
+
+.text-classic {
+	text-transform: none !important;
+	font-weight: 400 !important;
+}
+
+.light       {font-weight: 300 !important;}
+.regular     {font-weight: 400 !important;}
+.semibold    {font-weight: 600 !important;}
+.bold, b     {font-weight: 700 !important; color: var(--title);}
+.italic, em  {font-style:  italic !important;}
+
+h1, h2, h3, h4, h5, 
+.h1, .h2, .h3, .h4, .h5 {
+	color:var(--title);
+	small {
+		color:var(--prompt);
+	} 
+}
+
+h1, .h1, .logo-left {
+	font-size:1.75em;
+	font-weight:700;
+	margin:$s-4 0 $s-4; 
+	&.puce {
+		padding-left: 40px;
+		position: relative;
+		&::before {
+			content: '';
+			background: url(../images/puce-branding.svg) no-repeat top left;
+			height: 24px;
+			width: 24px;
+			left: 0;
+			top: 6px;
+			position: absolute;
+		}
+	}
+	strong {
+		position: relative;
+		&:after {
+			content: "";
+			background: var(--primary-100);
+			opacity: 0.52;
+			height: $s-3;
+			width: 100%;
+			position: absolute;
+			bottom: 8px;
+			left: $s-3;
+			z-index: -1;
+			border-radius: $s-1;
+		}
+	}
+	b {
+		font-family: 'MonteCarlo', cursive;
+		font-size: 1.1em;
+		background: var(--primary-100);
+		background: -webkit-linear-gradient(to right, #00D975 0%, #17AD8F 100%);
+		background: -moz-linear-gradient(to right, #00D975 0%, #17AD8F 100%);
+		background: linear-gradient(to right, #00D975 0%, #17AD8F 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		padding: 0 $s-1;
+	}
+	&.inline-block {
+		display: inline-block;
+		+ button.btn {
+			margin: -7px $s-2 0 $s-3 !important;
+			&:last-child {
+				margin-right: 0 !important;
+			}
+		}
+	}
+	+ .input-group {
+		margin-top: 14px;
+	}
+	.badge, .badges {
+		top: -3px;
+		margin-left: $s-1;
+	}
+}
+h2, .h2 {
+	font-size:1.3em;
+	font-weight:700;
+	margin:$s-4 0 $s-3;
+	line-height: 1.6;
+	&.inline-block {
+		margin-right: $s-2;
+		display: inline-block;
+		+ button {
+			margin-top: $s-2 !important;
+		}
+	}
+	i {
+		position: relative;
+		top: $s-1;
+	}
+	&.puce {
+		padding-left: 40px;
+		position: relative;
+		&::before {
+			content: '';
+			background: url(../images/puce-branding.svg) no-repeat top left;
+			height: $s-4;
+			width: $s-4;
+			left: 2px;
+			top: $s-1;
+			position: absolute;
+		}
+	}
+}
+h3, .h3 {
+	font-size:1.05em;
+	font-weight:700;
+	margin:$s-4 0 $s-3;
+	&.inline-block {
+		margin-right: $s-2;
+		display: inline-block;
+	}
+}
+h4, .h4 {
+	font-size:1em;
+	font-weight:600;
+	margin:$s-3 0 $s-2;
+}
+h5, .h5 {
+	font-size:1em;
+	font-weight:400;
+	margin:$s-3 0 $s-2;
+    i.icons {
+		margin: 0 10px;
+		font-size:1.15em;
+	}
+}
+p {
+	font-size:1em;
+	margin-bottom: $s-4;
+	color:var(--text);
+	letter-spacing: .2px;
+}
+small {
+	@extend %small;
+	color: var(--prompt);
+	font-weight: 400;
+}
+a {
+	color: var(--primary-300);
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	&:hover {
+		color: var(--primary-300);
+	}
+}
+
+blockquote {
+	font-style: italic;
+	font-size:1.2em;
+	padding: $s-4 $s-5;
+	border-left: 3px solid var(--border);
+	&.default {
+		font-size: 1em;
+		font-style: normal;
+		padding: $s-1 $s-4;
+		margin: $s-2 0;
+	}
+	footer.blockquote-footer {
+		@extend %small;
+	}
+}
+.tronc {
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

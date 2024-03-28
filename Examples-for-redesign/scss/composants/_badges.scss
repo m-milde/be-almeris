@@ -1,0 +1,130 @@
+.badge, .badges {
+	font-weight: 400;
+	padding: 2px $s-2;
+	border-radius: $s-3;
+	font-size: 12px;
+    position: relative;
+	color:var(--white);
+	line-height: $s-4;
+	&.badge-primary,
+	&.badge-success,
+	&.badge-info,
+	&.badge-valid {background:var(--primary-100) !important;color: var(--white) !important;}
+	&.badge-secondary {background:var(--element); color: var(--title);}
+	&.badge-error, 
+	&.badge-danger {background:$error-100;}
+	&.badge-warning {background:$warning-100;}
+	&.badge-light, &.badge-white {background: var(--white); color: var(--title); border: 1px solid var(--border);}
+	&.badge-dark {background: var(--dark);}
+	&.badge-prompt {background: var(--prompt);}
+}
+
+.badge-link, 
+a.badges, 
+a.badge {
+	cursor: pointer;
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus {
+		box-shadow: none !important;
+		border-radius: $s-3;
+	}
+	&.badge-primary, 
+	&.badge-success,
+	&.badge-info,
+	&.badge-valid  {
+		&:hover {
+			background: var(--primary-200) !important;
+		}
+		&:focus, &:active {
+			background: var(--primary-300) !important;
+		}
+	}
+	&.badge-secondary {
+		&:hover,
+		&:focus, 
+		&:active {	
+			background:var(--secondary-300) !important;
+			color: var(--title);
+		}
+	}
+	&.badge-error, 
+	&.badge-danger {
+		&:hover {
+			background: $error-200 !important;
+			color: var(--white);
+		}
+		&:focus, &:active {
+			background: $error-300 !important;
+			color: var(--white);
+		}
+	}
+	&.badge-warning {
+		&:hover {
+			background: $warning-200 !important;
+			color: var(--white);
+		}
+		&:focus, &:active {
+			background: $warning-300 !important;
+			color: var(--white);
+		}
+	}
+	&.badge-light,
+	&.badge-white {
+		&:hover {	
+			background:var(--element) !important;
+			color: var(--title);
+		}
+		&:focus, &:active {	
+			background:var(--accessibility) !important;
+			color: var(--title);
+		}
+	}
+}
+
+.badge-icon,
+a.badge-icon {
+	padding: 0 $s-1;
+	min-height: $s-4;
+	display: inline-block;
+	&:hover {
+		text-decoration: none;
+	}
+	i {
+        position: relative;
+		font-size: 14px;
+		top: 3px;
+		float: left;
+		margin: 0 2px 0 $s-1;
+	}
+	span {
+		margin-right: $s-1;
+		position: relative;
+		top: -1px;
+	}  
+	&.badge-primary, 
+	&.badge-success,
+	&.badge-info,
+	&.badge-warning,
+	&.badge-error, 
+	&.badge-danger {
+		i {
+			color: var(--white);
+		}
+	}
+	&.badge-light,
+	&.badge-white,
+	&.badge-secondary {
+		i {
+			color: var(--prompt);
+		}
+	}
+}
+
+.badges.badge-small {
+	height: 8px;
+    width: 8px;
+    display: inline-block;
+    padding: 0;
+}

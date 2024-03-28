@@ -1,0 +1,9 @@
+.form-check input[type=checkbox] + label {
+    padding: 0 $s-5 $s-3 0;
+    &:before {
+        right: 0;
+    }
+    &:after {
+        right: 1px;
+    }
+}

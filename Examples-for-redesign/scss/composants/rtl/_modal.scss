@@ -1,0 +1,31 @@
+.modal .modal-dialog .modal-content .close {
+    left: $s-2;
+    right: inherit;
+}
+
+.modal.right {
+    &.fade .modal-large {
+        left: -500px;
+        right: inherit;
+        -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+            -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+                -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+                transition: opacity 0.3s linear, left 0.3s ease-out;
+    }
+    &.fade .modal-xl {
+        left: -45%;
+        right: inherit;
+        -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+            -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+                -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+                transition: opacity 0.3s linear, left 0.3s ease-out;
+    }
+    &.fade.show .modal-dialog {
+        left: 0;
+        right: inherit;
+        border-bottom-right-radius: $s-2 !important;
+        border-top-right-radius: $s-2 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+    }
+}

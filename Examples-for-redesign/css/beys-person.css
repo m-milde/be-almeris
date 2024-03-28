@@ -1,0 +1,46 @@
+.person {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.person-default-2 {
+    background-image: url('../images/person/default-2.svg');
+}
+
+.person-default {
+    background-image: url('../images/person/default.svg');
+}
+
+.person-error-2 {
+    background-image: url('../images/person/error-2.svg');
+}
+
+.person-error {
+    background-image: url('../images/person/error.svg');
+}
+
+.person-help-2 {
+    background-image: url('../images/person/help-2.svg');
+}
+
+.person-help {
+    background-image: url('../images/person/help.svg');
+}
+
+.person-login-2 {
+    background-image: url('../images/person/login-2.svg');
+}
+
+.person-login {
+    background-image: url('../images/person/login.svg');
+}
+
+.person-logout-2 {
+    background-image: url('../images/person/logout-2.svg');
+}
+
+.person-logout {
+    background-image: url('../images/person/logout.svg');
+}

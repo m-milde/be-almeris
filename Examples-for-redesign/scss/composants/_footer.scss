@@ -1,0 +1,37 @@
+footer {
+	@extend %anim;
+	&.footer-sidebar {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		z-index: 10;
+		width: 280px;
+		background: var(--white);
+		padding: $s-4 0;
+		text-align: center;
+	}
+	p {
+		margin:0;
+		font-size:12px;
+		color: var(--prompt);
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	footer.footer-sidebar {
+		width: 190px;
+		left: 10px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	footer.footer-sidebar {
+		width: 100%;
+		position: relative;
+		clear: both;
+		float: left;
+		background: transparent;
+		left: 0 !important;
+		z-index: 0;
+	}
+}
