@@ -1,0 +1,69 @@
+/**
+ * Put HTML DOM element previously converted to string into a div to indent it and returns it
+ * @param {*} str - DOM element
+ */
+function process(str) {
+    var div = document.createElement('div');
+    div.innerHTML = str.trim();
+    return format(div, 0).innerHTML;
+}
+/**
+ * Indent given node and returns it
+ * @param {*} node - DOM element to indent
+ * @param {*} level
+ */
+function format(node, level) {
+    var indentBefore = new Array(level++ + 1).join('  '),
+        indentAfter = new Array(level - 1).join('  '),
+        textNode;
+    for (var i = 0; i < node.children.length; i++) {
+        textNode = document.createTextNode('\n' + indentBefore);
+        node.insertBefore(textNode, node.children[i]);
+        format(node.children[i], level);
+        if (node.lastElementChild == node.children[i]) {
+            textNode = document.createTextNode('\n' + indentAfter);
+            node.appendChild(textNode);
+        }
+    }
+    return node;
+}
+
+/**
+ * Append code preview into a code tag identified by a className or an ID
+ * @param {*} codeTagClassOrId - Code tag where DOM element will be appended
+ * @param {*} elementClassOrId - DOM element to append into code tag
+ */
+function setCodePreview(codeTagClassOrId, elementClassOrId) {
+    $(codeTagClassOrId).text(process($(elementClassOrId)[0].outerHTML.replace(/\n/g, "").replace(/\t/g, "")));
+}
+
+/**
+ * Copy code to clipboard
+ */
+$(document).ready(function() {
+    $('code, pre').append('<span class="command-copy" ><i class="fa fa-clipboard" aria-hidden="true"></i></span>');
+  
+    $('code span.command-copy').click(function(e) {
+      var text = $(this).parent().text().trim(); //.text();
+      var copyHex = document.createElement('input');
+      copyHex.value = text
+      document.body.appendChild(copyHex);
+      copyHex.select();
+      document.execCommand('copy');
+      console.log(copyHex.value)
+      document.body.removeChild(copyHex);
+    });
+  
+  
+    $('pre span.command-copy').click(function(e) {
+      var text = $(this).parent().text().trim();
+      var copyHex = document.createElement('input');
+      copyHex.value = text
+      document.body.appendChild(copyHex);
+      copyHex.select();
+      document.execCommand('copy');
+      console.log(copyHex.value)
+      document.body.removeChild(copyHex);
+    });
+})
+

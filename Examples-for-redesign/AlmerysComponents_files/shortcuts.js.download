@@ -1,0 +1,226 @@
+// const body = $('body');
+
+body.keydown(toggleAccessibility);
+
+function toggleAccessibility(event) {
+  if (event.key === "Tab") {
+    var accessibility = document.activeElement.closest(".accessibility");
+    var content = document.activeElement.closest(".content");
+
+    if (body.hasClass("accessibilityactive")) {
+      if (!accessibility) {
+        body.removeClass("accessibilityactive");
+      }
+    } else {
+      if (!content) {
+        body.addClass("accessibilityactive");
+      }
+    }
+  }
+}
+
+$(".content").on("click", function (event) {
+  body.removeClass("accessibilityactive");
+});
+
+// view keyboard
+$("#ViewHelp input").click(function () {
+  if ($("body").hasClass("viewkeyboard")) {
+    $("body").removeClass("viewkeyboard");
+  } else {
+    $("body").addClass("viewkeyboard");
+  }
+});
+
+// G + * -------//
+
+var isG = false;
+$(document)
+  .keydown(function (e) {
+    if (e.which == 71 || e.keyCode == 71) {
+      isG = true;
+    }
+  })
+  .keyup(function (e) {
+    if (
+      $("input:focus").length > 0 ||
+      $("textarea:focus").length > 0 ||
+      isG != true
+    ) {
+      isG = false;
+      return false;
+    }
+    if (e.keyCode == true) {
+      var key = e.keyCode;
+    } else {
+      var key = e.which;
+    }
+    switch (key) {
+      // G + numbers (Navigation sidebar)
+      case 48:
+        $("#Nav0").click();
+        return false;
+        break;
+      case 49:
+        window.location.href = $("#Nav1 a").attr("href");
+        $("#Nav1").click();
+        return false;
+        break;
+      case 50:
+        window.location.href = $("#Nav2 a").attr("href");
+        $("#Nav2").click();
+        return false;
+        break;
+      case 51:
+        window.location.href = $("#Nav3 a").attr("href");
+        $("#Nav3").click();
+        return false;
+        break;
+      case 52:
+        window.location.href = $("#Nav4 a").attr("href");
+        $("#Nav").click();
+        return false;
+        break;
+      case 53:
+        window.location.href = $("#Nav5 a").attr("href");
+        $("#Nav5").click();
+        return false;
+        break;
+      case 54:
+        window.location.href = $("#Nav6 a").attr("href");
+        $("#Nav6").click();
+        return false;
+        break;
+      case 55:
+        window.location.href = $("#Nav7 a").attr("href");
+        $("#Nav7").click();
+        return false;
+        break;
+      case 56:
+        window.location.href = $("#Nav8 a").attr("href");
+        $("#Nav8").click();
+        return false;
+        break;
+      case 57:
+        window.location.href = $("#Nav9 a").attr("href");
+        $("#Nav8").click();
+        return false;
+        break;
+
+      // G + A add (call to action)
+      case 65:
+        $("#BtnAction").click();
+        return false;
+        break;
+
+      // G + B
+      case 66:
+        window.location.href = $(".back").attr("href");
+        return false;
+        break;
+
+      // G + C
+      case 67:
+        $("#BtnCancel").click();
+        return false;
+        break;
+        $(".btn-cancel").click();
+        return false;
+        break;
+
+      // G + D
+      case 68:
+        $("#BtnDelete").click();
+        return false;
+        break;
+
+      // G + E
+      case 69:
+        $("#BtnEdit").click();
+        return false;
+        break;
+
+      // G + F
+      case 70:
+        $("#BtnDeselect").click();
+        return false;
+        break;
+
+      // G + H back to home
+      case 72:
+        window.location.href = "/";
+        return false;
+        break;
+
+      // G + K
+      case 75:
+        if ($("body").hasClass("viewkeyboard")) {
+          $("body").removeClass("viewkeyboard");
+        } else {
+          $("body").addClass("viewkeyboard");
+        }
+        return false;
+        break;
+
+      // G + M change mode dark < > light
+      case 77:
+        $(".theme-switch").click();
+        return false;
+        break;
+
+      // G + N open/closed sidebar
+      case 78:
+        if ($(".btn-sidebar").hasClass("close")) {
+          $(".btn-sidebar").removeClass("close");
+          $("body").removeClass("sidebar-close");
+        } else {
+          $(".btn-sidebar").addClass("close");
+          $("body").addClass("sidebar-close");
+        }
+        return false;
+        break;
+
+      // G + Q
+      case 81:
+        $("#FAQ").click();
+        return false;
+        break;
+
+      // G + Z
+      case 83:
+        $("#Notif").click();
+        return false;
+        break;
+
+      // U change table
+      case 85:
+        $("#User").click();
+        return false;
+        break;
+
+      // G + X close modal
+      case 88:
+        $(".close").click();
+        return false;
+        break;
+
+      // G + , filter table
+      case 188:
+        $("#BtnTable").click();
+        return false;
+        break;
+
+      // G + ; change table
+      case 186:
+        $("#BtnOrga").click();
+        return false;
+        break;
+
+      // G + /
+      case 191:
+        $(".input-group [type=search]").focus();
+        return false;
+        break;
+    }
+    isG = false;
+  });

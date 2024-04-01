@@ -1,0 +1,198 @@
+// Forms styles 
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-check {
+  padding: 0;
+  position: relative;
+}
+
+.form-left {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+label {
+  font-size: 1em;
+  color: var(--title);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+input, .form-control,
+select {
+  color: var(--title);
+  font-size: 1em;
+  border: 1px solid var(--border) !important;
+  width: 100%;
+  background: var(--white);
+  margin: 0 0 12px 0;
+  height: 40px;
+  line-height: 28px;
+  padding: 4px 12px;
+}
+input + small,
+input + p, .form-control + small,
+.form-control + p,
+select + small,
+select + p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+input:hover, .form-control:hover,
+select:hover {
+  background: var(--background);
+}
+input:focus, .form-control:focus,
+select:focus {
+  outline: none;
+  border: 1px solid var(--text) !important;
+  background: var(--background);
+  box-shadow: none;
+  color: var(--title);
+  box-shadow: none !important;
+}
+
+select {
+  padding: 4px 8px;
+}
+
+select[multiple] {
+  height: 180px !important;
+}
+
+html input[disabled], html input[disabled]:hover,
+.form-control:disabled, .form-control[readonly] {
+  background: var(--background);
+  cursor: not-allowed;
+}
+
+textarea {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  width: 100%;
+  min-height: 136px;
+  margin: 0 0 12px 0;
+  color: var(--title);
+}
+textarea:hover {
+  background: var(--element);
+}
+textarea:focus {
+  outline: none;
+  border: 1px solid var(--text);
+  background: var(--element);
+  box-shadow: none !important;
+  color: var(--title);
+}
+
+.help input, .help select {
+  margin: 0;
+}
+.help p {
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+.help p i {
+  float: left;
+  margin-right: 12px;
+  font-size: 20px;
+  color: var(--text);
+  position: relative;
+  top: 2px;
+}
+
+.form-group.form-error input, .form-group.form-error select {
+  border-bottom: 2px solid var(--error-100) !important;
+  margin: 0;
+}
+.form-group.form-error p {
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+.form-group.form-error p i {
+  float: left;
+  margin-right: 8px;
+  font-size: 20px;
+  color: var(--error-100);
+  position: relative;
+  top: 2px;
+}
+
+input.error {
+  border: 1px solid var(--error-100) !important;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: var(--prompt);
+  opacity: 0.52;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+  color: var(--prompt);
+  opacity: 0.52;
+}
+
+input[type=color] {
+  width: 52px;
+}
+
+.input-title {
+  border: 0 !important;
+  height: 52px;
+  line-height: 52px;
+  font-size: 1.8em;
+  font-weight: 600;
+  color: var(--dark);
+}
+.input-title:focus {
+  border: 0 !important;
+}
+
+.textarea-text {
+  border: none;
+  font-size: 1em;
+}
+.textarea-text:focus {
+  border: 0 !important;
+}
+
+.form-control-plaintext {
+  padding: 4px 12px;
+}
+.form-control-plaintext:hover, .form-control-plaintext:focus {
+  background: none;
+  border: none;
+}
+
+input[type=search] {
+  padding: 4px 0 4px 12px;
+}
+input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-results-button, input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  opacity: 0;
+}
+
+.form-group-small label {
+  font-size: 0.8em;
+  margin-bottom: 4px;
+}
+.form-group-small input,
+.form-group-small select {
+  height: 32px;
+  line-height: 32px;
+  margin-bottom: 8px;
+  padding: 4px 8px;
+}
+
+.input-group > input[type=search] {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}

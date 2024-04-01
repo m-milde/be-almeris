@@ -1,0 +1,196 @@
+// Buttons styles
+
+.btn,
+a.btn,
+button {
+  border: none;
+  margin: 0 8px 12px 0;
+  height: 40px;
+  padding: 0 12px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 38px;
+}
+.btn:last-child,
+a.btn:last-child,
+button:last-child {
+  margin-right: 0 !important;
+}
+.btn:hover, .btn:focus, .btn:active .btn:disabled,
+a.btn:hover,
+a.btn:focus,
+.btn:active a.btn:disabled,
+button:hover,
+button:focus,
+.btn:active button:disabled,
+a.btn:active .btn:disabled,
+a.btn:active a.btn:disabled,
+a.btn:active button:disabled,
+button:active .btn:disabled,
+button:active a.btn:disabled,
+button:active button:disabled {
+  border: transparent;
+}
+.btn i,
+a.btn i,
+button i {
+  position: relative;
+  top: 12px;
+  color: var(--white);
+  font-size: 15px;
+}
+.btn:hover, .btn:focus,
+a.btn:hover,
+a.btn:focus,
+button:hover,
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+.btn.btn-lg,
+a.btn.btn-lg,
+button.btn-lg {
+  height: 52px;
+  padding: 0 20px;
+  line-height: 52px;
+}
+.btn.btn-lg i,
+a.btn.btn-lg i,
+button.btn-lg i {
+  font-size: 20px;
+}
+.btn.btn-lg.icon-left i, .btn.btn-lg.icon-right i,
+a.btn.btn-lg.icon-left i,
+a.btn.btn-lg.icon-right i,
+button.btn-lg.icon-left i,
+button.btn-lg.icon-right i {
+  position: relative;
+  top: 15px !important;
+}
+.btn.btn-small,
+a.btn.btn-small,
+button.btn-small {
+  height: 32px;
+  line-height: 32px;
+  min-width: 32px;
+}
+.btn.btn-small .icon,
+a.btn.btn-small .icon,
+button.btn-small .icon {
+  height: 28px;
+  width: 28px;
+  line-height: 28px;
+  padding: 4px;
+  top: 2px;
+  left: 2px;
+}
+.btn.btn-small i,
+a.btn.btn-small i,
+button.btn-small i {
+  top: 9px;
+}
+
+.btn-primary {
+  background: var(--primary-100);
+  color: var(--white);
+}
+.btn-primary i {
+  color: var(--white) !important;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active .btn-primary:disabled {
+  color: var(--white);
+}
+.btn-primary:hover {
+  background-color: var(--primary-200) !important;
+  box-shadow: 0;
+}
+.btn-primary:focus, .btn-primary:active {
+  background-color: var(--primary-300) !important;
+}
+.btn-primary.disabled, .btn-primary:disabled {
+  background: var(--primary-100) !important;
+}
+
+.btn-primary.active:hover,
+.btn-primary:active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary:active.focus,
+.btn-primary:active:focus,
+.open > .dropdown-toggle.btn-primary.focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:not([disabled]):not(.disabled).active,
+.btn-primary:not([disabled]):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle,
+.btn.btn-primary.show {
+  color: var(--white);
+  background: var(--primary-300);
+}
+
+.btn.btn-secondary,
+.btn.btn-default {
+  background: var(--white);
+  color: var(--text);
+}
+.btn.btn-secondary i,
+.btn.btn-default i {
+  color: var(--prompt) !important;
+}
+.btn.btn-secondary:hover,
+.btn.btn-default:hover {
+  color: var(--title);
+  background-color: var(--element);
+}
+.btn.btn-secondary:focus, .btn.btn-secondary:active,
+.btn.btn-default:focus,
+.btn.btn-default:active {
+  color: var(--title);
+  background-color: var(--secondary-300);
+}
+.btn.btn-secondary.disabled, .btn.btn-secondary:disabled,
+.btn.btn-default.disabled,
+.btn.btn-default:disabled {
+  background: var(--secondary-100);
+  opacity: 0.52;
+}
+
+.btn-secondary.active:hover,
+.btn-secondary:active:hover,
+.open > .dropdown-toggle.btn-secondary:hover,
+.btn-secondary.active.focus,
+.btn-secondary.active:focus,
+.btn-secondary:active.focus,
+.btn-secondary:active:focus,
+.open > .dropdown-toggle.btn-secondary.focus,
+.open > .dropdown-toggle.btn-secondary:focus,
+.btn-secondary:not([disabled]):not(.disabled).active,
+.btn-secondary:not([disabled]):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle,
+.btn-default.active:hover,
+.btn-default:active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default.active.focus,
+.btn-default.active:focus,
+.btn-default:active.focus,
+.btn-default:active:focus,
+.open > .dropdown-toggle.btn-default.focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:not([disabled]):not(.disabled).active,
+.btn-default:not([disabled]):not(.disabled):active,
+.show > .btn-default.dropdown-toggle {
+  color: var(--title);
+  background: var(--secondary-300);
+}
+
+
+.btn-print {
+	border: none;
+	background-color: transparent;
+	background-image: url('data:image/svg+xml,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 36" style="enable-background:new 0 0 40 36;" xml:space="preserve"><style type="text/css">.st0{fill:%23414288;}</style><path class="st0" d="M34,10H6c-3.32,0-6,2.68-6,6v12h8v8h24v-8h8V16C40,12.68,37.32,10,34,10z M28,32H12V22h16V32z M34,18c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S35.1,18,34,18z M32,0H8v8h24V0z"/></svg>');
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 3.889rem;
+	height: 1.444rem;
+	background-size: auto 80%;
+}

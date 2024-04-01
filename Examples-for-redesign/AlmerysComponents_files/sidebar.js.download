@@ -1,0 +1,36 @@
+
+$(".sidebar .sub-menu > a").click(function(e) {
+	$(".sidebar ul ul").slideUp(), $(this).next().is(":visible") || $(this).next().slideDown(),
+	e.stopPropagation()
+})
+$('.sidebar .sub-menu > a').click(function(){
+	var href = $(this).attr('href'); 
+	$('.opened').removeClass('opened');
+	$( this ).parent().addClass( "opened" );
+})
+
+/* Button - Fermer/Ouvrir sidebar - mobile */
+$(document).ready(function(){
+	$('.nav-icon').click(function(){
+		$(this).toggleClass('open');
+	});
+});
+
+$(document).ready(function(){
+	$('.nav-icon').click(function(){
+		$('.sidebar').toggleClass('sidebar-open');
+	})
+})
+
+/* Button - Fermer/Ouvrir sidebar - desktop */
+$(document).ready(function(){
+	$('.btn-sidebar').click(function(){
+		$(this).toggleClass('close');
+	});
+});
+
+$(document).ready(function(){
+	$('.btn-sidebar').click(function(){
+		$('body').toggleClass('sidebar-close');
+	})
+})
