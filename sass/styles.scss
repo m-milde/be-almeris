@@ -96,24 +96,6 @@ main{
       }
     }
 
-    .services{
-      a{
-        font-weight: bold;
-        font-size: 1.2rem;
-        position: relative;
-        gap: 1rem;
-        display: flex;
-
-        &:before{
-          content: "";
-          width: 1.5rem;
-          height: 1.5rem;
-          margin-top: 2px;
-          background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 13 13' style='enable-background:new 0 0 13 13;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23424187;%7D%0A%3C/style%3E%3Cpath class='st0' d='M6.5,0C2.91,0,0,2.91,0,6.5C0,10.09,2.91,13,6.5,13c3.59,0,6.5-2.91,6.5-6.5C13,2.91,10.09,0,6.5,0z M4.06,9.82 l1.9-3.28l-1.9-3.28l5.69,3.28L4.06,9.82z'/%3E%3C/svg%3E");
-        }
-      }
-    }
-
     // Form with input fields
     
     .form-heading {
