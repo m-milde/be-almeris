@@ -47,30 +47,35 @@ des remboursements santé
                         <div class="form-wrapper">
                             <form id="form1" action="" method="" class="w-75 mx-auto">
                                 <section class="flex-column">
-                    <h4 class="h1 font-size-30">Identification de votre patient - criteres de recherche majeurs</h4>
-                    <p class="text-color-dark fw-bold">Veuillez saisir soit le numéro national d'identification (NNI) de votre patient, soit son nom, soit son n° de contrat</p>
-                                <div>
+                                    <h4 class="h1 font-size-30">Identification de votre patient - criteres de recherche majeurs</h4>
+                                    <p class="text-color-dark fw-bold">Veuillez saisir soit le numéro national d'identification (NNI) de votre patient, soit son nom, soit son n° de contrat</p>
+                                <div class="form-group">
                                     <label for="nni">NNI</label>
                                     <input id="nni" type="text" placeholder="">
                                 </div>
-                                <div>
+                                <div class="form-group">
                                     <label for="nom">Nom</label>
                                     <input id="nom" type="text" placeholder="">
                                 </div>
-                                <div>
+                                <div class="form-group">
                                     <label for="date1">Date de naissance</label>
                                     <input id="date1" type="date" placeholder="">
                                 </div>
-                                <div>
+                                <div class="form-group">
                                     <label for="prenom">Prénom</label>
-                                    <input id="prenom" type="text" placeholder="">
+                                    <div class="form-group form-error">
+                                        <input id="prenom" type="text" placeholder="">
+                                        <p>
+                                            <i class="icons icon-close"></i><small>Erreur de message</small>
+                                        </p>
+                                    </div>
                                 </div>
-                                <div>
+                                <div class="form-group">
                                     <label for="ring">Rang de naissance</label>
                                     <input id="ring" type="text" placeholder="">
                                 </div>
                                 <h2 class="font-size-20">Date de soins</h2>
-                                <div>
+                                <div class="form-group">
                                     <label for="date2">Date de Soins</label>
                                     <input id="date2" type="date" placeholder="">
                                 </div>
