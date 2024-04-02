@@ -143,6 +143,29 @@ main{
       caption{
         font-weight: bold;
       }
+
+      .form-check{
+        &:has(input[type="radio"]){
+         width: 20px;
+         height: 20px;
+         input[type="radio"],
+         label{
+          width: 20px;
+          height: 20px;
+          margin: 0 !important;
+          padding: 0 !important;
+           &+ label:hover{
+            background: transparent;
+           }
+           &:before, &:after{
+            width: 20px;
+            height: 20px;
+            top: 0;
+            left: 0;
+           }
+         }
+        }
+      }
     }
 
     .form-wrapper {
