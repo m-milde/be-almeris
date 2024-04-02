@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/be-ys.css">
+  </head>
+  <body>
+        <header>
+            <div class="container d-flex align-items-center gap-5">
+                <div class="brand">
+                    <a href=""></a>
+                </div>
+                <p class="d-flex m-0">
+                    La gestion simplifiée <br>
+des remboursements santé
+                </p>
+                <div class="header-right d-flex ms-auto gap-3 flex-wrap">
+                    <div class="text-color-mutted">
+                        pour les
+                    </div>
+                    <div>
+                        <a href=""  class="text-color-accent-secondary">Professionels de Sante</a>
+                    </div>
+                    <span></span>
+                    <div>
+                        <a href="" class="text-color-default">Patients</a>
+                    </div>
+                    <span></span>
+                    <div>
+                        <a href="" class="text-color-accent-light">Organismes complémentaires</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="page-title-decor py-4">
+                <div class="container">
+                    <h1 class="jumbo-title">Aspace Professionnels</h1>
+                </div>
+            </div>
+            <div class="container page-content">
+                <div class="mx-auto mt-5 pt-5 w-75 form-wrapper">
+                        <form id="login-form" action="" method="" class="w-75 mx-auto">
+                            <section class="flex-column">
+                                <h4 class="h1 font-size-30">Register account</h4>
+                                <div class="form-group">
+                                    <label class="" for="nom">Nom</label>
+                                    <input id="nom" name="nom" type="text" placeholder="Enter your last name here" autocomplete="" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="" for="prenom">Prenom</label>
+                                    <input id="prenom" name="prenom" type="text" placeholder="Enter your first name here" autocomplete="" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="" for="email">Email</label>
+                                    <input id="email" name="email" type="email" placeholder="Enter your email here" autocomplete="" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="" for="email">Username</label>
+                                    <input id="username" name="username" type="text" placeholder="Enter your username here" autocomplete="" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="" for="current-password">Password</label>
+                                    <input id="current-password" name="current-password" type="password" autocomplete="current-password" placeholder="Enter your password here" aria-describedby="password-constraints" required="">
+                                    <button id="toggle-password" type="button" class="toggle-password" aria-label="Show password as plain text. Warning: this will display your password on the screen.">Show password</button>
+                                </div>
+                                <div class="form-group">
+                                    <label class="" for="current-password">Repeat password</label>
+                                    <div class="form-group form-error">
+                                        <input id="current-password" name="current-password" type="password" autocomplete="current-password" placeholder="Enter your password here" aria-describedby="password-constraints" required="">
+                                        <p><i class="icons icon-close"></i><small>Erreur de message</small></p>
+                                        <button id="toggle-password" type="button" class="toggle-password" aria-label="Show password as plain text. Warning: this will display your password on the screen.">Show password</button>
+                                    </div>
+                                </div>
+                                    <div class="d-flex gap-3 justify-content-between align-items-center">
+                                    <input class="btn-primary signin-btn ms-auto ms-auto" type="submit" id="signin" value="Valider">
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+            </div>
+        </main>
+        <footer class="d-flex gap-3 my-5 justify-content-center">
+            <a href="" class="">Contactez-nous</a><a href="" class="">Mentions Legales</a>
+        </footer>
+
+        <script>
+            var hidePass = document.getElementById("toggle-password");
+            hidePass.addEventListener("click", function() {
+              hidePass.classList.toggle("hide");
+            });
+        </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+</html>
