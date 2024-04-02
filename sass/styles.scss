@@ -150,16 +150,8 @@ main{
       }
     }
 
-    .login-form{
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        align-items: end;
-        background-color: color-mix(in srgb, var(--ba-surface-bg-default) 80%, white);
-        padding: 2rem 3rem;
-        box-shadow: 0 1.275rem 2rem 0 color-mix(in srgb, var(--ba-surface-bg-dark) 20%, transparent), 0 1px 0 1px color-mix(in srgb, var(--ba-surface-bg-dark) 20%, transparent);
-        border-radius: 0.45rem;
+    .form-wrapper {
+      margin: 0 auto;
         
       section{
         position: relative;
@@ -168,15 +160,6 @@ main{
 
         > div{
           position: relative;
-        }
-
-        input:not([type=submit]){
-          height: 2.556rem;
-          padding: 0.556rem 1.556rem 0.556rem 0.778rem;
-          // &[type="password"]{
-          //   padding: 0.556rem 1.556rem 0.556rem 0.778rem;
-          // }
-          
         }
 
         .toggle-password{
