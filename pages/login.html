@@ -52,10 +52,17 @@ des remboursements santé
                                     <button id="toggle-password" type="button" class="toggle-password" aria-label="Show password as plain text. Warning: this will display your password on the screen.">Show password</button>
                                 </div>
                                     <div class="d-flex gap-3 justify-content-between align-items-center">
-                                        <div class="form-check mb-0">
+                                        <div class="form-check mb-0 flex-shrink-0">
 											<input class="form-check-input" name="flexRadioDefault" id="flexRadioDefault1" type="checkbox">
 											<label class="form-check-label mb-0" for="flexRadioDefault1">Connexion MFA</label>
 										</div>
+                                        <fieldset class="otp-code">
+                                            <legend>otp</legend>
+                                            <input type="text" maxlength="1">
+                                            <input type="text" maxlength="1">
+                                            <input type="text" maxlength="1">
+                                            <input type="text" maxlength="1">
+                                        </fieldset>
                                     <input class="btn-primary signin-btn ms-auto ms-auto" type="submit" id="signin" value="Valider">
                                 </div>
                             </section>

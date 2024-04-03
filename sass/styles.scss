@@ -91,49 +91,6 @@ main{
       }
     }
 
-    // Form with input fields
-    
-    .form-heading {
-      font-size: 1.375rem;
-      background-color: var(--white);
-      text-align: center;
-      padding: 0.188rem;
-    }
-    .form-wrapper{
-      form{
-        display: flex;
-        flex-direction: column;
-        gap: 1px;
-      }
-      .form-row{
-        display: flex;
-        color: var(--ba-text-color-dark);
-
-        .form-row-label{
-          text-align: right;
-          width: 30%;
-          padding: .445rem;
-          color: var(--ba-text-color-default);
-
-          label{
-            width: 100%;
-          }
-        }
-
-        .form-row-input{
-          width: 70%;
-          padding: .445rem;
-        }
-      }
-
-      .form-btns{
-        margin: 1rem auto;
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-      }
-    }
-
     .table{
       caption-side: bottom;
 
@@ -216,6 +173,16 @@ main{
       .signin-btn{
         width: auto;
         margin: 0 0 auto 0;
+      }
+
+      fieldset {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 1rem;
+        > *{
+          margin: 0;
+        }
       }
     }
   }
