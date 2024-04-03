@@ -62,14 +62,14 @@ des remboursements santé
                                 <div class="form-group">
                                     <label class="" for="current-password">Password</label>
                                     <input id="current-password" name="current-password" type="password" autocomplete="current-password" placeholder="Enter your password here" aria-describedby="password-constraints" required="">
-                                    <button id="toggle-password" type="button" class="toggle-password" aria-label="Show password as plain text. Warning: this will display your password on the screen.">Show password</button>
+                                    <button type="button" class="toggle-password" aria-label="Show password as plain text. Warning: this will display your password on the screen.">Show password</button>
                                 </div>
                                 <div class="form-group">
                                     <label class="" for="current-password">Repeat password</label>
                                     <div class="form-group form-error">
                                         <input id="current-password" name="current-password" type="password" autocomplete="current-password" placeholder="Enter your password here" aria-describedby="password-constraints" required="">
                                         <p><i class="icons icon-close"></i><small>Erreur de message</small></p>
-                                        <button id="toggle-password" type="button" class="toggle-password" aria-label="Show password as plain text. Warning: this will display your password on the screen.">Show password</button>
+                                        <button type="button" class="toggle-password" aria-label="Show password as plain text. Warning: this will display your password on the screen.">Show password</button>
                                     </div>
                                 </div>
                                     <div class="d-flex gap-3 justify-content-between align-items-center">
@@ -85,7 +85,7 @@ des remboursements santé
         </footer>
 
         <script>
-            var hidePass = document.getElementById("toggle-password");
+            var hidePass = document.querySelector(".toggle-password");
             hidePass.addEventListener("click", function() {
               hidePass.classList.toggle("hide");
             });
