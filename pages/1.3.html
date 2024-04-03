@@ -9,108 +9,116 @@
 
   </head>
   <body>
-        <header>
-            <div class="container d-flex align-items-center gap-5">
-                <div class="brand">
-                    <a href=""></a>
-                </div>
-                <p class="d-flex m-0">
-                    La gestion simplifiée <br>
+    <header>
+        <div class="container d-flex align-items-center gap-5">
+          <div class="brand">
+              <a href=""></a>
+          </div>
+          <p class="d-flex m-0">
+              La gestion simplifiée <br>
 des remboursements santé
-                </p>
-                
-                <div class="header-right d-flex ms-auto gap-3 flex-wrap align-items-center">
-                  <div class="text-color-mutted">
-                      pour les
-                  </div>
-                  <a href="">Professionels de Sante</a>
-                  <span></span>
-                  <a href="">Patients</a>
-                  <span></span>
-                  <a href="">Organismes complémentaires</a>
-                  <span></span>
-                  <button class="btn-secondary m-0">Logout</button>
-              </div>
+          </p>
+          <div class="header-right d-flex ms-auto gap-3 flex-wrap align-items-center">
+            <div class="text-color-mutted">
+                pour les
             </div>
-        </header>
+            <a href="">Professionels de Sante</a>
+            <span></span>
+            <a href="">Patients</a>
+            <span></span>
+            <a href="">Organismes complémentaires</a>
+            <span></span>
+            <button class="btn-secondary m-0">Logout</button>
+          </div>
+        </div>
+      </header>
         <main>
+          <div class="page-title-decor py-4">
+              <div class="container">
+                  <h1 class="jumbo-title">Choix d'une carte bénéficiaire</h1>
+              </div>
+          </div>
             <div class="container">
                 <div class="page-content mx-auto mt-5">
-                    <h1 class="decor text-color-dark">Choix d'une carte bénéficiaire</h1>
                     <div class="d-flex flex-column mt-5">
-                        <h2 class="form-heading">
+                      <h2 class="h1 font-size-30 text-center">
                         Veuillez sélectionner la carte que vous désirez consulter</h2>
                         <div class="text-center my-5">---  UNKNOWN DATA HERE  ---</div>
-                        <h2 class="form-heading mt-5">
-                        Nombre total de cartes trouves</h2>
+                        <section class="d-flex flex-column mt-5">
+                          <h4 class="h1 font-size-30 text-center">
+                            Nombre total de cartes trouves
+                          </h4>
                         <div class="form-wrapper">
                             <form id="form1" action="" method="">
-                                <table class="table table-hover table-success">
-                                    <thead>
-                                        <tr>
-                                          <th scope="col"></th>
-                                          <th scope="col">№ Carte</th>
-                                          <th scope="col">№ Contant</th>
-                                          <th scope="col">Beneficiaires</th>
-                                          <th scope="col">Date de restitution de la carte</th>
-                                          <th scope="col">Date de debut de validite des droits</th>
-                                          <th scope="col">Date de fin du contrat</th>
-                                          <th scope="col">Motif</th>
-                                          <th scope="col">Imprimer pdf ecarte TP</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <td>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                          </div>
-                                        </td>
-                                          <td>Mark</td>
-                                          <td>Otto</td>
-                                          <td>@mdo</td>
-                                          <td>Otto</td>
-                                          <td>@mdo</td>
-                                          <td>Otto</td>
-                                          <td>@mdo</td>
-                                          <td><button class="btn-print" title="Imprimer pdf ecarte TP" onClick="window.print()"></button></td>
-                                        </tr>
-                                        <tr>
-                                          <td>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked="">
-                                          </div>
-                                        </td>
-                                          <td>Jacob</td>
-                                          <td>Thornton</td>
-                                          <td>@fat</td>
-                                          <td>Thornton</td>
-                                          <td>@fat</td>
-                                          <td>Thornton</td>
-                                          <td>@fat</td>
-                                          <td><button class="btn-print" title="Imprimer pdf ecarte TP" onClick="window.print()"></button></td>
-                                        </tr>
-                                      </tbody>
-                                </table>
+                                
+                                
+                          <table class="table table-hover table-success">
+                            <thead>
+                                <tr>
+                                  <th scope="col"></th>
+                                  <th scope="col">№ Carte</th>
+                                  <th scope="col">№ Contant</th>
+                                  <th scope="col">Beneficiaires</th>
+                                  <th scope="col">Date de restitution de la carte</th>
+                                  <th scope="col">Date de debut de validite des droits</th>
+<th scope="col">Date de fin du contrat</th>
+<th scope="col">Motif</th>
+<th scope="col">Imprimer pdf ecarte TP</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="">
+                                      <label class="form-check-label" for="flexRadioDefault1"></label>
+                                  </div>
+                                </td>
+                                  <td>Mark</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+<td>@mdo</td>
+<td>@mdo</td>
+<td><button class="btn-print m-0 p-3" title="Imprimer pdf ecarte TP" onclick="window.print()"></button></td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                      <label class="form-check-label" for="flexRadioDefault2"></label>
+                                  </div>
+                                </td>
+                                  <td>Jacob</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+<td>@fat</td>
+<td>@fat</td>
+<td><button class="btn-print m-0 p-3" title="Imprimer pdf ecarte TP" onclick="window.print()"></button></td>
+                                </tr>
+                                
+                              </tbody>
+                              
+                        </table>
                             </form>
-                            <div class="form-btns">
-                                <button class="btn-secondary" type="submit" form="form1" value="Valider">Retour</button>
-                                <button class="btn-primary" type="submit" form="form1" value="Valider">Valider</button>
-                            </div>
+                            <div class="d-flex justify-content-center">
+                          <button class="btn-secondary" type="submit" form="form1" value="Valider">Retour</button>
+                          <button class="btn-primary" type="submit" form="form1" value="Valider">Valider</button>
+                      </div>
                         </div>
+                      </section>
                     </div>
                 </div>
             </div>
         </main>
-        <footer class="d-flex flex-column align-items-end">
-            <div class="footer-top surface-bg-accent-dark w-75 ps-4 d-flex gap-3">
-                <a href="" class="text-color-default">Contactez-nous</a>
-                <a href="" class="text-color-default">Mentions Legales</a>
-            </div>
-            <div class="footer-bottom surface-bg-dark2 w-100">
-                
-            </div>
-        </footer>
+        
+        <footer class="d-flex gap-3 my-5 justify-content-center">
+          <a href="" class="">Contactez-nous</a><a href="" class="">Mentions Legales</a>
+      </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
