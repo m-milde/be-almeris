@@ -170,19 +170,25 @@ main{
         }
       }
 
-      .signin-btn{
-        width: auto;
-        margin: 0 0 auto 0;
+      .conexion-mfa{
+        label{
+          padding: 9px 10px 8px 34px;
+        }
       }
 
       fieldset {
         display: flex;
         align-items: center;
-        gap: 1rem;
-        margin: 0 1rem;
+        gap: .4rem;
+        margin-right: 1rem;
         > *{
           margin: 0;
         }
+      }
+
+      .signin-btn{
+        width: auto;
+        margin: 0 0 auto 0;
       }
     }
   }
