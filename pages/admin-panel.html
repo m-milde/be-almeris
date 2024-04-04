@@ -148,11 +148,13 @@ des remboursements santé
 
       <!-- Manipulate the input fields disabled atribute -->
       <script>
-        var inputField = document.querySelector('.employee-1');
+        var inputFields = document.querySelectorAll('.employee-1');
         var toggleButton = document.querySelector('.edit-employee');
         toggleButton.addEventListener('click', function() {
+          inputFields.forEach(function(inputField) {
           inputField.disabled = !inputField.disabled;
         });
+      });
       </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
