@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page 1.2 - Full width</title>
+    <title>Page 2.3 - Full width</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/be-ys.css">
 
@@ -37,100 +37,96 @@ des remboursements santé
             </div>
         </header>
         <main>
-            <div class="container">
-                <div class="page-content page-content-full-width mx-auto mt-5">
-                    <h1 class="decor text-color-dark">Détermination du bénéficiaire</h1>
-                    <p class="text-color-dark">
-                        Vos critères de recherche n'ont pas permis de déterminer de façon unique le bénéficiaire. Nous vous proposons une liste correspondant à votre recherche.
-                        Veuillez sélectionner le bénéficiaire que vous recherchez et valider.</p>
-                    <div class="d-flex flex-column mt-5">
-                        <h2 class="form-heading">
-                            3 bénéficiaires ont été trouvés avec les critères saisis.</h2>
-                        <div class="form-wrapper">
-                            <form id="form1" action="" method="">
-                                <table class="table table-hover">
-                                    <caption>Cliquez sur le NNI pou selectionner le beneficiaire</caption>
-                                    <thead>
-                                        <tr>
-                                          <th scope="col"></th>
-                                          <th scope="col">NNI</th>
-                                          <th scope="col">Nom / Prenom</th>
-                                          <th scope="col">Date de naissance</th>
-                                          <th scope="col"># Contrat</th>
-                                          <th scope="col">Organizme <br> Complementaire</th>
-                                          <th scope="col"># Contrat</th>
-                                          <th scope="col">Organizme <br> Complementaire</th>
-                                          <th scope="col"># Contrat</th>
-                                          <th scope="col">Organizme <br> Complementaire</th>
-                                          <th scope="col"># Contrat</th>
-                                          <th scope="col">Organizme <br> Complementaire</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <td>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                          </div>
-                                        </td>
-                                          <td>Mark</td>
-                                          <td>Otto</td>
-                                          <td>@mdo</td>
-                                          <td>Otto</td>
-                                          <td>@mdo</td>
-                                          <td>Otto</td>
-                                          <td>@mdo</td>
-                                          <td>Otto</td>
-                                          <td>@mdo</td>
-                                          <td>Otto</td>
-                                          <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                          <td>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked="">
-                                          </div>
-                                        </td>
-                                          <td>Jacob</td>
-                                          <td>Thornton</td>
-                                          <td>@fat</td>
-                                          <td>Thornton</td>
-                                          <td>@fat</td>
-                                          <td>Thornton</td>
-                                          <td>@fat</td>
-                                          <td>Thornton</td>
-                                          <td>@fat</td>
-                                          <td>Thornton</td>
-                                          <td>@fat</td>
-                                        </tr>
-                                        <tr>
-                                          <td>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                                          </div>
-                                        </td>
-                                          <td>Larry the Bird</td>
-                                          <td>@twitter</td>
-                                          <td>blah</td>
-                                          <td>@twitter</td>
-                                          <td>blah</td>
-                                          <td>@twitter</td>
-                                          <td>blah</td>
-                                          <td>@twitter</td>
-                                          <td>blah</td>
-                                          <td>@twitter</td>
-                                          <td>blah</td>
-                                        </tr>
-                                      </tbody>
-                                </table>
-                            </form>
-                            <div class="form-btns">
-                                <button class="btn-secondary" type="submit" form="form1" value="Valider">Retour</button>
-                                <button class="btn-primary" type="submit" form="form1" value="Valider">Valider</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="page-title-decor py-4">
+              <div class="container">
+                  <h1 class="jumbo-title">Relevé des prestations</h1>
+              </div>
+          </div>
+            
+          <div class="container page-content page-content-full-width">
+            <div class="mx-auto mt-5">
+              <p class="font-size-18 container">
+                Voici le relevé des prestations payees et rejetees pour la période du 01/01/2024 au 31/01/2024.</p>
+                    <section class="d-flex flex-column mt-5">
+                      <h4 class="h1 font-size-30 text-center">
+                        3 bénéficiaires ont été trouvés avec les critères saisis.</h4>
+                          <table class="table table-hover">
+                              <!-- <caption>Cliquez sur le NNI pou selectionner le beneficiaire</caption> -->
+                              <thead>
+                                  <tr>
+                                    <th scope="col">№ de facture</th>
+                                    <th scope="col">Date de facture</th>
+                                    <th scope="col">NNI beneficiaire des soins</th>
+                                    <th scope="col">Nom beneficiaire des soins</th>
+                                    <th scope="col">Prenom beneficiaire des soins<br> Complementaire</th>
+                                    <th scope="col">Date de dedut des soins</th>
+                                    <th scope="col">Nature de flux de facture</th>
+                                    <th scope="col">Montant total de la facture</th>
+                                    <th scope="col">Mont RC global</th>
+                                    <th scope="col">Montant paye</th>
+                                    <th scope="col">Montant retenu</th>
+                                    <th scope="col">Motif rejet</th>
+                                    <th scope="col">Date virement</th>
+                                    <th scope="col">Date compensation</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                    <td>@mdo</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>@fat</td>
+                                    <td>@fat</td>
+                                    <td>@fat</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Larry the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>blah</td>
+                                    <td>@twitter</td>
+                                    <td>blah</td>
+                                    <td>@twitter</td>
+                                    <td>blah</td>
+                                    <td>@twitter</td>
+                                    <td>blah</td>
+                                    <td>@twitter</td>
+                                    <td>blah</td>
+                                    <td>blah</td>
+                                    <td>blah</td>
+                                    <td>blah</td>
+                                  </tr>
+                                </tbody>
+                          </table>
+                      </form>
+                      <div class="d-flex justify-content-center">
+                          <button class="btn-secondary" type="submit" form="form1" value="Valider">Retour</button>
+                          <button class="btn-primary" type="submit" form="form1" value="Valider">Valider</button>
+                      </div>
+                    </section>
             </div>
         </main>
         
