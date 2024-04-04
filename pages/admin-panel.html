@@ -170,8 +170,11 @@ des remboursements santé
         // Delete employee
         var deleteButton = document.querySelector('button[data-name="delete-button-1"]');
         deleteButton.addEventListener('click', function() {
-          var row = this.closest('tr');
-          row.parentNode.removeChild(row);
+          var confirmation = confirm('Are you sure you want to delete this row?');
+          if (confirmation) {
+            var row = deleteButton.closest('tr');
+            row.parentNode.removeChild(row);
+          }
         });
       </script>
 
