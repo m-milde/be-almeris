@@ -118,6 +118,28 @@ main{
         background-size: auto 80%;
       }
 
+      input[type="text"]{
+        margin-bottom: 0;
+
+          &[disabled]{
+          margin-bottom: 0;
+          background: transparent;
+          border: none !important;
+        }
+      }
+
+      button.btn-icon{
+        padding-top: 9px;
+        i{
+          color: var(--text);
+          top: unset;
+  
+          &:before{
+            font-size: 22px;
+          }
+        }
+      }
+
       .form-check{
         &:has(input[type="radio"]){
          width: 20px;
