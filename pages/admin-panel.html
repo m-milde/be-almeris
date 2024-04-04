@@ -47,7 +47,7 @@ des remboursements santé
                 <div class="d-flex justify-content-between align-items-center">
                   <h4 class="h1 font-size-30 text-center">
                       Admin panel</h4>
-                      <button type="button" class="btn btn-primary left-icon mr-0" aria-label="">
+                      <button type="button" class="btn btn-primary left-icon m-0" aria-label="">
                         <i class="icons icon-person-delete font-size-18" aria-hidden="true"></i>
                         Add employee
                       </button>
@@ -66,73 +66,73 @@ des remboursements santé
                               <tr>
                                 <td>
                                   <div class="d-flex">
-                                  <button type="button" class="btn btn-icon mb-0" aria-label="">
+                                  <button type="button" class="btn btn-icon mb-0" aria-label="" data-name="delete-button-1">
                                     <i class="icons icon-person-delete font-size-18" aria-hidden="true"></i>
                                   </button>
-                                  <button type="button" class="btn btn-icon mb-0 edit-employee" aria-label="">
+                                  <button type="button" class="btn btn-icon mb-0 edit-employee" aria-label="" data-name="edit-button-1">
                                     <i class="icons icon-edit-2 font-size-18" aria-hidden="true"></i>
                                   </button>
                                 </div>
                                 </td>
                                 <td>
-                                  <input type="text" value="John" class="employee-1" disabled>
+                                  <input type="text" value="John" class="employee-1" data-name="employee-1" disabled>
                                 </td>
                                 <td>
-                                  <input type="text" value="Doe" class="employee-1" disabled>
+                                  <input type="text" value="Doe" class="employee-1" data-name="employee-1" disabled>
                                 </td>
                                 <td>
-                                  <input type="text" value="Username" class="employee-1" disabled>
+                                  <input type="text" value="Username"  class="employee-1" data-name="employee-1" disabled>
                                 </td>
                                 <td>
-                                  <input type="text" value="email-adress@email.com" class="employee-1" disabled>
+                                  <input type="text" value="email-adress@email.com"  class="employee-1" data-name="employee-1" disabled>
                                 </td>
                               </tr>
                               <tr>
                                 <td>
                                   <div class="d-flex">
-                                  <button type="button" class="btn btn-icon mb-0" aria-label="">
+                                  <button type="button" class="btn btn-icon mb-0" aria-label="" data-name="delete-button-2">
                                     <i class="icons icon-person-delete font-size-18" aria-hidden="true"></i>
                                   </button>
-                                  <button type="button" class="btn btn-icon mb-0 edit-employee" aria-label="">
+                                  <button type="button" class="btn btn-icon mb-0 edit-employee" aria-label="" data-name="edit-button-2">
                                     <i class="icons icon-edit-2 font-size-18" aria-hidden="true"></i>
                                   </button>
                                 </div>
                                 </td>
                                 <td>
-                                  <input type="text" value="John" class="employee-1" disabled>
+                                  <input type="text" value="John"  class="employee-2" data-name="employee-2" disabled>
                                 </td>
                                 <td>
-                                  <input type="text" value="Doe" class="employee-1" disabled>
+                                  <input type="text" value="Doe"  class="employee-2" data-name="employee-2" disabled>
                                 </td>
                                 <td>
-                                  <input type="text" value="Username" class="employee-1" disabled>
+                                  <input type="text" value="Username" class="employee-2" data-name="employee-2" disabled>
                                 </td>
                                 <td>
-                                  <input type="text" value="email-adress@email.com" class="employee-1" disabled>
+                                  <input type="text" value="email-adress@email.com" class="employee-2" data-name="employee-2" disabled>
                                 </td>
                               </tr>
                               <tr>
                                 <td>
                                   <div class="d-flex">
-                                  <button type="button" class="btn btn-icon mb-0" aria-label="">
+                                  <button type="button" class="btn btn-icon mb-0" aria-label="" data-name="delete-button-3">
                                     <i class="icons icon-person-delete font-size-18" aria-hidden="true"></i>
                                   </button>
-                                  <button type="button" class="btn btn-icon mb-0 edit-employee" aria-label="">
+                                  <button type="button" class="btn btn-icon mb-0 edit-employee" aria-label="" data-name="edit-button-3">
                                     <i class="icons icon-edit-2 font-size-18" aria-hidden="true"></i>
                                   </button>
                                 </div>
                                 </td>
                                 <td>
-                                  <input type="text" value="John" class="employee-1" disabled>
+                                  <input type="text" value="John" class="employee-3" data-name="employee-3" disabled>
                                 </td>
                                 <td>
-                                  <input type="text" value="Doe" class="employee-1" disabled>
+                                  <input type="text" value="Doe" class="employee-3" data-name="employee-3" disabled>
                                 </td>
                                 <td>
-                                  <input type="text" value="Username" class="employee-1" disabled>
+                                  <input type="text" value="Username" class="employee-3" data-name="employee-3" disabled>
                                 </td>
                                 <td>
-                                  <input type="text" value="email-adress@email.com" class="employee-1" disabled>
+                                  <input type="text" value="email-adress@email.com" class="employee-3" data-name="employee-3" disabled>
                                 </td>
                               </tr>
                             </tbody>
@@ -147,7 +147,7 @@ des remboursements santé
       </footer>
 
       <!-- Manipulate the input fields disabled atribute -->
-      <script>
+      <!-- <script>
         var inputFields = document.querySelectorAll('.employee-1');
         var toggleButton = document.querySelector('.edit-employee');
         toggleButton.addEventListener('click', function() {
@@ -155,6 +155,24 @@ des remboursements santé
           inputField.disabled = !inputField.disabled;
         });
       });
+      </script> -->
+
+      <script>
+        // Edit Employee
+        var toggleButton = document.querySelector('button[data-name="edit-button-1"]');
+        toggleButton.addEventListener('click', function() {
+          var employeeInputs = document.querySelectorAll('input[data-name="employee-1"]');
+          employeeInputs.forEach(function(inputField) {
+            inputField.disabled = !inputField.disabled;
+          });
+        });
+
+        // Delete employee
+        var deleteButton = document.querySelector('button[data-name="delete-button-1"]');
+        deleteButton.addEventListener('click', function() {
+          var row = this.closest('tr');
+          row.parentNode.removeChild(row);
+        });
       </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
