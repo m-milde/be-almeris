@@ -37,116 +37,78 @@ des remboursements santé
             </div>
         </header>
         <main>
-            <div class="container">
-                <div class="page-content mx-auto mt-5">
-                    <h1 class="decor text-color-dark">Consultation des prestations payées</h1>
-                    <p class="text-color-dark">
-                        Ce service vous permet de consulter en temps réel le relevé des prestations payées et/ou rejetées pour:
-                        <br>
-                        - une période donnée
-                        <br>
-                        - un bénéficiaire
-                    </p>
-                    <div class="d-flex flex-column mt-5">
-                        <h2 class="form-heading">Veuillez saisir les critères de recherche</h2>
-                        <div class="form-wrapper">
-                            <form id="form1" action="" method="">
-                                <div class="form-row">
-                                    <div class="form-row-label">
-                                        <label for="nni">Type de prestations</label>
-                                    </div>
-                                    <div class="form-row-input d-flex gap-3">
-                                        <div class="form-check p-0 d-flex gap-2 align-items-center">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
-                                                Payées et rejetées
-                                            </label>
-                                        </div>
-                                        <div class="form-check p-0 d-flex gap-2 align-items-center">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                                            <label class="form-check-label" for="flexRadioDefault2">
-                                                Payées
-                                            </label>
-                                        </div>
-                                        <div class="form-check p-0 d-flex gap-2 align-items-center">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                                            <label class="form-check-label" for="flexRadioDefault3">
-                                                Rejetées
-                                            </label>
-                                        </div>                  
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-row-label">
-                                        <label for="date1">Période de règlement</label>
-                                    </div>
-                                    <div class="form-row-input">
-                                        <input id="date1" type="date" placeholder="">
-                                        <span class="px-2">au</span>
-                                        <input id="date2" type="date" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-row-label">
-                                        <label for="date1">Période de règlement</label>
-                                    </div>
-                                    <div class="form-row-input">
-                                        <input id="date3" type="date" placeholder="">
-                                        <span class="px-2">au</span>
-                                        <input id="date4" type="date" placeholder="">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <p class="text-color-dark">Le critère "Période des décomptes" n'est pas applicable pour la recherche de prestations rejetées.</p>
-                        <h2 class="form-heading mt-3">Identification de votre patient - criteres de recherche majeurs</h2>
-                        <p class="text-color-dark fw-bold">Veuillez saisir soit le numéro national d'identification (NNI) de votre patient, soit son nom, soit son n° de contrat</p>
-
-                        <div class="form-wrapper">
-                            <form id="form1" action="" method="">
-                                <div class="form-row">
-                                    <div class="form-row-label">
-                                        <label for="nom">NNI</label>
-                                    </div>
-                                    <div class="form-row-input">
-                                        <input id="nni" type="text" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-row-label">
-                                        <label for="nom">Nom</label>
-                                    </div>
-                                    <div class="form-row-input">
-                                        <input id="nom" type="text" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-row-label">
-                                        <label for="date5">Date de naissance</label>
-                                    </div>
-                                    <div class="form-row-input">
-                                        <input id="date5" type="date" placeholder="">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-row-label">
-                                        <label for="prenom">Prénom</label>
-                                    </div>
-                                    <div class="form-row-input">
-                                        <input id="prenom" type="text" placeholder="">
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="form-btns">
-                                <button class="btn-primary" type="submit" form="form1" value="Valider">Valider</button>
-                            </div>
-                        </div>
-
-                    </div>
+            <div class="page-title-decor py-4">
+                <div class="container">
+                    <h1 class="jumbo-title">Consultation des prestations payées</h1>
                 </div>
             </div>
+            <div class="container page-content pt-5">
+                 <p class="font-size-18">
+                        Vos critères de recherche n'ont pas permis de déterminer de façon unique le bénéficiaire. Nous vous proposons une liste correspondant à votre recherche.
+                        Veuillez sélectionner le bénéficiaire que vous recherchez et valider.</p>
+                    <div class="mx-auto mt-5 pt-5 w-75 form-wrapper"><form id="login-form" action="" method="" class="w-75 mx-auto">
+                        <section class="flex-column">
+                          <h4 class="h1 font-size-30">Veuillez saisir les critères de recherche</h4>
+                          <div class="form-group">
+                                  <label for="nni">Type de prestations</label><div class="d-flex gap-3">
+                                      <div class="form-check p-0 d-flex gap-2 align-items-center">
+                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                          <label class="form-check-label" for="flexRadioDefault1">
+                                              Payées et rejetées
+                                          </label>
+                                      </div>
+                                      <div class="form-check p-0 d-flex gap-2 align-items-center">
+                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                          <label class="form-check-label" for="flexRadioDefault2">
+                                              Payées
+                                          </label>
+                                      </div>
+                                      <div class="form-check p-0 d-flex gap-2 align-items-center">
+                                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                                          <label class="form-check-label" for="flexRadioDefault3">
+                                              Rejetées
+                                          </label>
+                                      </div>                  
+                                  </div>
+                                  
+                              </div><div class="form-group">
+                                  <label for="date1">Période de règlement</label>
+                                  <div class="d-flex gap-2 align-items-center">
+                                      <input id="date1" type="date" placeholder="">
+                                      <span class="px-2">au</span>
+                                      <input id="date2" type="date" placeholder="">
+                                  </div>
+                              </div><div class="form-group">
+                                  <label for="date1">Période de règlement</label>
+                                  <div class="d-flex gap-2 align-items-center">
+                                      <input id="date3" type="date" placeholder="">
+                                      <span class="px-2">au</span>
+                                      <input id="date4" type="date" placeholder="">
+                                  </div>
+                              </div>
+                        <p class="text-color-dark">Le critère "Période des décomptes" n'est pas applicable pour la recherche de prestations rejetées.</p>
+                        <h4 class="h1 font-size-30">Identification de votre patient - criteres de recherche majeurs</h4>
+                        <p class="text-color-dark fw-bold">Veuillez saisir soit le numéro national d'identification (NNI) de votre patient, soit son nom, soit son n° de contrat</p>
+                        <div class="form-group">
+                                <label for="nom">NNI</label><input id="nni" type="text" placeholder="">
+                                
+                            </div><div class="form-group">
+                                <label for="nom">Nom</label><input id="nom" type="text" placeholder="">
+                                
+                            </div><div class="form-group">
+                                <label for="date5">Date de naissance</label><input id="date5" type="date" placeholder="">
+                                
+                            </div><div class="form-group">
+                                <label for="prenom">Prénom</label><input id="prenom" type="text" placeholder="">
+                                
+                            </div><div class="d-flex">
+                                <button type="submit" form="form1" value="Valider" class="btn-primary ms-auto">Valider</button>
+                            </div>
+                    </section>
+                  </form>
+              </div>
+            </div>
         </main>
-        
         <footer class="d-flex gap-3 my-5 justify-content-center">
             <a href="" class="">Contactez-nous</a><a href="" class="">Mentions Legales</a>
         </footer>
