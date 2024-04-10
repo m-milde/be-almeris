@@ -72,9 +72,9 @@ des remboursements santé
                                   <button type="button" class="btn btn-icon mb-0 btn-edit" data-name="edit-button">
                                     <i class="icons icon-edit-2 font-size-18"></i>
                                   </button>
-                                  <button type="button" class="btn btn-icon mb-0 btn-approve" data-name="approve-button">
+                                  <button type="button" class="btn btn-icon mb-0 btn-approve disabled" data-name="approve-button">
                                   </button>
-                                  <button type="button" class="btn btn-icon mb-0 btn-cancel">
+                                  <button type="button" class="btn btn-icon mb-0 btn-cancel disabled" data-name="cancel-button"></button>
                                   </button>
                                 </div>
                                 </td>
@@ -163,16 +163,32 @@ des remboursements santé
 
       <script>
         // Edit Employee
-        var toggleButton = document.querySelector('button[data-name="edit-button-1"]');
-        toggleButton.addEventListener('click', function() {
-          var employeeInputs = document.querySelectorAll('input[data-name="employee-1"]');
+        var deleteBtn = document.querySelector('button[data-name="delete-button"]');
+        var editBtn = document.querySelector('button[data-name="edit-button"]');
+        var approveBtn = document.querySelector('button[data-name="approve-button"]');
+        var cancelBtn = document.querySelector('button[data-name="cancel-button"]');
+        var employeeInputs = document.querySelectorAll('input[data-name="employee-1"]');
+        editBtn.addEventListener('click', function() {
+          deleteBtn.classList.toggle('disabled');
+          approveBtn.classList.toggle('disabled');
+          cancelBtn.classList.toggle('disabled');
+          editBtn.classList.toggle('disabled');
+          employeeInputs.forEach(function(inputField) {
+            inputField.disabled = !inputField.disabled;
+          });
+        });
+        cancelBtn.addEventListener('click', function() {
+          deleteBtn.classList.toggle('disabled');
+          approveBtn.classList.toggle('disabled');
+          cancelBtn.classList.toggle('disabled');
+          editBtn.classList.toggle('disabled');
           employeeInputs.forEach(function(inputField) {
             inputField.disabled = !inputField.disabled;
           });
         });
 
         // Delete employee
-        var deleteButton = document.querySelector('button[data-name="delete-button-1"]');
+        var deleteButton = document.querySelector('button[data-name="delete-button"]');
         deleteButton.addEventListener('click', function() {
           var confirmation = confirm('Are you sure you want to delete this row?');
           if (confirmation) {
