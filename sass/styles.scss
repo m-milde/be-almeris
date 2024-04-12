@@ -243,7 +243,8 @@ main{
         }
       }
 
-      fieldset {
+      fieldset,
+      .opt-code {
         display: flex;
         align-items: center;
         gap: .4rem;
@@ -256,6 +257,11 @@ main{
       .signin-btn{
         width: auto;
         margin: 0 0 auto 0;
+      }
+      
+      .form-btns{
+        display: flex;
+        justify-content: end;
       }
     }
   }
@@ -282,14 +288,14 @@ main{
 
 // OTP code
 
-div.otp-code{
-  background-color: var(--primary-12);
-  text-align: center;
-  letter-spacing: .25rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  padding: 1rem;
-}
+// div.otp-code{
+//   background-color: var(--primary-12);
+//   text-align: center;
+//   letter-spacing: .25rem;
+//   font-weight: 600;
+//   margin-bottom: 1rem;
+//   padding: 1rem;
+// }
 
 // Footer
 
