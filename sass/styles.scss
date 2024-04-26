@@ -54,11 +54,23 @@ header{
   }
 
   .header-right{
+    column-gap: 1.4rem !important;
     span{
       display: inline-flex;
       width: 1px;
       height: 1.5rem;
       background-color: #acacac;
+    }
+    a{
+      position: relative;
+      &:not(:last-of-type):after{
+        content: "|";
+        position: absolute;
+        right: -0.8rem;
+        pointer-events: none;
+        top: -1px;
+        color: #acacac;
+      }
     }
   }
 }
@@ -103,7 +115,6 @@ main{
 
       td{
         vertical-align: middle;
-        padding: .5rem .5rem !important;
       }
 
       .btn-print {
@@ -244,7 +255,7 @@ main{
       }
 
       fieldset,
-      .opt-code {
+      .otp-code {
         display: flex;
         align-items: center;
         gap: .4rem;
