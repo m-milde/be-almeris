@@ -4749,3 +4749,59 @@ a.users:hover .initiale {
 .font-size-80 {
   font-size: 80px !important;
 }
+
+/* Pagination */
+
+
+.pagination {
+	margin: 0 0 12px 0;
+	align-items: center;
+	justify-content: center;
+}
+.pagination p {
+  padding:10px 0
+}
+.pagination li a.page-link {
+  border:0;
+  background:var(--secondary-100);
+  color:var(--text);
+  text-decoration:none;
+  padding:10px;
+  height:40px
+}
+.pagination li a.page-link i {
+  font-size:20px;
+  color:var(--text)
+}
+.pagination li a.page-link:hover,
+.pagination li a.page-link:focus {
+  color:var(--title);
+  outline:none;
+  box-shadow:none
+}
+.pagination li a.page-link:hover {
+  background:var(--element)
+}
+.pagination li a.page-link:focus {
+  background:var(--secondary-300)
+}
+.pagination li.active a.page-link {
+  background:var(--primary-100);
+  color:var(--white);
+  border:0 !important
+}
+.pagination li.active a.page-link:hover {
+  background:var(--primary-200)
+}
+.pagination li.active a.page-link:focus {
+  background:var(--primary-300) !important
+}
+.pagination li.number a {
+  padding:8px 12px
+}
+.page-item.disabled .page-link {
+  color:var(--prompt);
+  background-color:var(--white);
+  border-color:rgba(0,0,0,0);
+  opacity:.8
+}
